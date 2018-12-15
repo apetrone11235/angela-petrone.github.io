@@ -200,7 +200,7 @@ prose:
           value: "post"
       - name: "title"
         field:
-          element: "_posts/2018-12-15-about-me.md"
+          element: "![Resume]({{site.baseurl}}/img/resume.jpg)![resume.jpg]({{site.baseurl}}/img/resume.jpg)"
           label: "About Me"
           placeholder: "about me"
           alterable: true
