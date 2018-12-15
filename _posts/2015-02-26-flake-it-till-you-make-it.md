@@ -4,8 +4,7 @@ title: First Post About Thesis
 subtitle: Thesis
 bigimg: /img/path.jpg
 tags:
-  - books
-  - test
+  - Thesis
 published: true
 date: '2018-12-15'
 ---
