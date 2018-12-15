@@ -11,3 +11,5 @@ date: '2018-12-15'
 ---
 
 Here I will discuss my thoughts a couple years out from my thesis
+
+![Resume]({{site.baseurl}}/img/resume.jpg)![resume.jpg]({{site.baseurl}}/img/resume.jpg)
