@@ -11,14 +11,15 @@ baseurl: "angela-petrone.com"
 title: Angela Petrone
 
 # Short description of your site
-description: Asking simple questions with complex answers
+description: Personal Website
 
 # --- Navigation bar options --- #
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "AboutAngela"
-  Resources:
+  About Angela: "AboutAngela"
+  Resume + Academic Work
+  Work History:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
