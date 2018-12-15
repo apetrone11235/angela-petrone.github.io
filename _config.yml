@@ -18,7 +18,7 @@ description: Personal Website
 # List of links in the navigation bar
 navbar-links:
   About Angela: "aboutme"
-  Resume and Academic Work: "_posts/2015-01-04-first-post.md"
+  Resume and Academic Work: "![Resume]({{site.baseurl}}/img/resume.jpg)![resume.jpg]({{site.baseurl}}/img/resume.jpg)"
   Work History:
     - CNA Insurance: "https://www.cna.com/web/guest/cna/home/"
     - Independence Blue Cross: "http://www.ibx.com/"
