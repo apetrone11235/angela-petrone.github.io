@@ -18,10 +18,10 @@ description: Personal Website
 # List of links in the navigation bar
 navbar-links:
   About Angela: "aboutme"
-  Resume + Academic Work: "/img/avatar-icon.png"
+  Resume and Academic Work: "/img/avatar-icon.png"
   Work History:
-    - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
-    - Learn markdown: "http://www.markdowntutorial.com/"
+    - CNA Insurance: "www.cna.com"
+    - Independence Blue Cross: "www.ibx.com"
     - GitHub Pages: "2015-01-04-first-post.md"
   Author's home: "apetrone11235.github.io"
 
