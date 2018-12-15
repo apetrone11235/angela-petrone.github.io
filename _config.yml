@@ -202,6 +202,7 @@ prose:
         field:
           element: "![Resume]({{site.baseurl}}/img/resume.jpg)![resume.jpg]({{site.baseurl}}/img/resume.jpg)"
           label: "About Me"
+          help: "2018-12-15"
           placeholder: "about me"
           alterable: true
       - name: "subtitle"
