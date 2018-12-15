@@ -17,7 +17,7 @@ description: Asking simple questions with complex answers
 
 # List of links in the navigation bar
 navbar-links:
-  About Me: "aboutme"
+  About Me: "AboutAngela"
   Resources:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
