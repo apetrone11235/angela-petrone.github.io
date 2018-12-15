@@ -17,7 +17,7 @@ description: Personal Website
 
 # List of links in the navigation bar
 navbar-links:
-  About Angela: "[About Me] (www.google.com)"
+  About Angela: "aboutme.md"
   Resume + Academic Work: "/img/avatar-icon.png"
   Work History:
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
