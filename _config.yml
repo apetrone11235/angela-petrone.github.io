@@ -201,9 +201,9 @@ prose:
           value: "post"
       - name: "title"
         field:
-          element: "text"
-          label: "Post title"
-          placeholder: "Title"
+          element: "_posts/2018-12-15-about-me.md"
+          label: "About Me"
+          placeholder: "about me"
           alterable: true
       - name: "subtitle"
         field:
