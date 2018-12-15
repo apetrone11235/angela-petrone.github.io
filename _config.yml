@@ -19,7 +19,7 @@ description: Personal Website
 navbar-links:
   About Angela: "aboutme"
   Resume and Academic Work: "https://github.com/apetrone11235/apetrone11235.github.io/raw/master/_posts/%7B%7Bsite.baseurl%7D%7D/img/resume.jpg"
-  Work History:
+  Where I Have Worked:
     - CNA Insurance: "https://www.cna.com/web/guest/cna/home/"
     - Independence Blue Cross: "http://www.ibx.com/"
   
