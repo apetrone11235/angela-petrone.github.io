@@ -18,7 +18,7 @@ description: Personal Website
 # List of links in the navigation bar
 navbar-links:
   Resume: "img/resume.jpg"
-  Resume and Academic Work: "https://github.com/apetrone11235/apetrone11235.github.io/raw/master/_posts/%7B%7Bsite.baseurl%7D%7D/img/resume.jpg"
+  Academic Work: "https://github.com/apetrone11235/apetrone11235.github.io/raw/master/_posts/%7B%7Bsite.baseurl%7D%7D/img/resume.jpg"
   Where I Have Worked:
     - CNA Insurance: "https://www.cna.com/web/guest/cna/home/"
     - Independence Blue Cross: "http://www.ibx.com/"
@@ -200,8 +200,8 @@ prose:
           value: "post"
       - name: "title"
         field:
-          element: "![Resume]({{site.baseurl}}/img/resume.jpg)![resume.jpg]({{site.baseurl}}/img/resume.jpg)"
-          label: "About Me"
+          element: 
+          label: "
           help: "2018-12-15"
           placeholder: "about me"
           alterable: true
