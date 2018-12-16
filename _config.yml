@@ -200,7 +200,7 @@ prose:
           value: "post"
       - name: "title"
         field:
-          element: 
+          element: "subtitle"
           label: "
           help: "2018-12-15"
           placeholder: "about me"
