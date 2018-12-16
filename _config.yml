@@ -201,7 +201,7 @@ prose:
       - name: "title"
         field:
           element: "subtitle"
-          label: "
+          label: ""
           help: "2018-12-15"
           placeholder: "about me"
           alterable: true
