@@ -200,10 +200,9 @@ prose:
           value: "post"
       - name: "title"
         field:
-          element: "subtitle"
-          label: ""
-          help: "2018-12-15"
-          placeholder: "about me"
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
           alterable: true
       - name: "subtitle"
         field:
