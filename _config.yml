@@ -19,7 +19,7 @@ description: Personal Website
 navbar-links:
   Resume: "apetrone11235.github.io/img/Petrone Resume 12-2018.pdf"
   Academic Work: 
-    - Thesis Objectives: "apetrone11235.github.io/img/thesi.jpg"
+    - Thesis Objectives: "/img/thesi.jpg"
   Board Memberships:
   Current & Former Employers:
     - CNA Insurance: "https://www.cna.com/web/guest/cna/home/"
