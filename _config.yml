@@ -18,7 +18,7 @@ description: Personal Website
 # List of links in the navigation bar
 navbar-links:
   Resume: "img/resume.jpg"
-  Academic Work: "D:\Senior Year\Thesis\Compiled Thesis Work.docx"
+  Academic Work: "https://drive.google.com/drive/my-drive"
   Where I Have Worked:
     - CNA Insurance: "https://www.cna.com/web/guest/cna/home/"
     - Independence Blue Cross: "http://www.ibx.com/"
