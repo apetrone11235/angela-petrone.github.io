@@ -17,7 +17,7 @@ description: Personal Website
 
 # List of links in the navigation bar
 navbar-links:
-  Resume: "apetrone11235.github.io/img/Petrone Resume 12-2018.pdf"
+  Resume: "/img/Petrone Resume 12-2018.pdf"
   Academic Work: 
     - Thesis Objectives: "/img/thesi.jpg"
   Board Memberships:
