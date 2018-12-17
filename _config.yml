@@ -24,7 +24,9 @@ navbar-links:
     - Insurance Industry Charitable Foundation: "https://iicf.org/"
     - Back on My Feet Boston: "https://www.backonmyfeet.org/boston/"
   Current & Former Employers:
-    - CNA Insurance: "https://www.cna.com/web/guest/cna/home/"
+    - CNA Financial:
+        - Insurance: "https://www.cna.com/web/guest/cna/home/"
+        - Surety: "https://www.cnasurety.com/cna/guest/cnasurety/"
     - Independence Blue Cross: "http://www.ibx.com/"
   
 # Image to show in the navigation bar - image must be a square (width = height)
