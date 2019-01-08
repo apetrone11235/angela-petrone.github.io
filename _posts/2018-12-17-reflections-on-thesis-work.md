@@ -10,3 +10,4 @@ There is something a bit cringey about reading something I wrote nearly four yea
 To provide some context, here is the abstract from my paper:
 ![objectives]({{site.baseurl}}/img/thesi.jpg)
 
+The key premise of this paper and politcal thought at the time (especially in the US) was that giving people more comprehensive health insurance would improve overall health outcomes. Intuitively, this makes sense, and after working as a health insurance underwriter for three years, I have seen first hand how insurance mitigates catastrophic loss. 
