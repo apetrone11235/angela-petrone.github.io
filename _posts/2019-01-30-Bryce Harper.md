@@ -14,7 +14,7 @@ A couple words about the model:
 
 If you're unfamiliar with Moneyball, I highly recommend you read the book and/or watch the movie. It's a great and true story of how a Harvard statistician (Paul DePodesta) helped the Oakland A's make the playoffs an astounding number of years in a row on a tight budget. Essentially, DePodesta broke down the game into a couple of key components, built a highly effective predictive model and worked with the general manager, Billy Beane, to recruit players who had excellent numbers in certain areas while eschewing traditional methods of scouting and big name players.
 
-*Fun Philly Fact: Former Phillies GM Ed Wade (an actor, sadly not the actual guy) makes a brief appearance in the movie agreeing to take Jeremy Giambi off the A's hands. This was a terrible decision because the guy had stones for hands and was a disaster in the locker room, so you may understand why I'm a little wary of the Phillies' front office decisions.*
+*Fun Philly Fact: Former Phillies GM Ed Wade (an actor, sadly not the actual guy) makes a brief appearance in the movie agreeing to trade for Jeremy Giambi. This was a terrible decision because the guy had stones for hands and was a disaster in the locker room, so you may understand why I'm a little wary of the Phillies' front office decisions.*
 
 The tricky thing I ran into early on is that Harper has only been in the MLB since 2012. While there are an incredible amount of stats available for each of those years, only having 7 years of statistics isn't ideal. The same goes for Herrara and Williams. Fortunately, the Phillies are one of the oldest teams in any sport, so I had no trouble mining Baseball-Reference.com for franchise data. 
 
