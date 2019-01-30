@@ -21,4 +21,5 @@ The tricky thing I ran into early on is that Harper has only been in the MLB sin
 A helpful component of this project was that since the Phillies and Nationals are in the same division of the National League, comparing numbers between Harper, Herrara and Williams was fairly apples to apples, since they play many of the same teams at a similar frequency. 
 
 **The "money" part of Moneyball**
+
 It is important to keep in mind that Herrara is signed with the Phillies through 2021 with options through 2023. His contract is for $30MM over 5 yeasr (not including a $350,000 signing bonus so his 2019 salary is $5,350,000). Williams makes the MLB minimum of $553,000 with no longterm contracts. We don’t know how much Harper will ultimately sign for, but we do know that he’s leaving the Nationals after making $21.6M last year, so we can safely assume it will be a massive contract. The latest speculations are $300M over 10 years.
