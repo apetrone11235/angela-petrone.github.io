@@ -16,7 +16,7 @@ If you're unfamiliar with Moneyball, I highly recommend you read the book and/or
 
 *Fun Philly Fact: Former Phillies GM Ed Wade (an actor, sadly not the actual guy) makes a brief appearance in the movie agreeing to trade for Jeremy Giambi. This was a terrible decision because the guy had stones for hands and was a disaster in the locker room, so you may understand why I'm a little wary of the Phillies' front office decisions.*
 
-The tricky thing I ran into early on is that Harper has only been in the MLB since 2012. While there are an incredible amount of stats available for each of those years, only having 7 years of statistics isn't ideal. The same goes for Herrara and Williams. Fortunately, the Phillies are one of the oldest teams in any sport, so I had no trouble mining Baseball-Reference.com for franchise data. 
+The tricky thing I ran into early on is that Harper has only been in the MLB since 2012. While there are an incredible amount of stats available for each of those years, only having 7 years of statistics isn't ideal. The same goes for Herrara and Williams. Fortunately, the Phillies are one of the oldest teams in any sport, so I had no trouble mining [Baseball-Reference.com](https://www.baseball-reference.com/) for franchise data. 
 
 A helpful component of this project was that since the Phillies and Nationals are in the same division of the National League, comparing numbers between Harper, Herrara and Williams was fairly apples to apples, since they play many of the same teams at a similar frequency. 
 
