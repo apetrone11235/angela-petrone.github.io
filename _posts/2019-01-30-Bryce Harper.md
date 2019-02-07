@@ -39,3 +39,4 @@ Using this dataframe, I ran two linear regressions to help me make predictions a
 
 These results looked good to me, so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
 ![]({{site.baseurl}}/img/PhilliesCode3.png)
+
