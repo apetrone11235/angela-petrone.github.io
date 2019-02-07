@@ -2,7 +2,7 @@
 layout: post
 title: Reflections on Thesis Work
 subtitle: Taking a look back at my 2015 research and how it applies to today
-published: true
+published: false
 ---
 
 
