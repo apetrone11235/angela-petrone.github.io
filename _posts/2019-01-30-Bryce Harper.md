@@ -38,4 +38,4 @@ Using this dataframe, I ran two linear regressions to help me make predictions a
 ![]({{site.baseurl}}/img/PhilliesCode2.png)
 
 These results looked good to me, so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
-![]({{site.baseurl}}/img/PhilliesCode3.jpg)
+![]({{site.baseurl}}/img/PhilliesCode3.png)
