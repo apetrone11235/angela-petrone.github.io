@@ -4,7 +4,7 @@ title: Is Bryce Harper Worth it for the Phillies?
 published: true
 ---
 
-In order to distract myself from the fact that the Eagles are no longer the reigning Super Bowl Champs, I have been listening to Phillies trade rumors. The biggest story from this beat is without a doubt the potential for us to pick up Bryce Harper from our NL East rival the Nationals. 
+In order to distract myself from the fact that the Eagles are no longer the reigning Super Bowl Champs, I have been listening to Phillies trade rumors. The biggest story from this beat is without a doubt the potential for us to pick up Bryce Harper (OF, 26 y.o.) from our NL East rival the Nationals. 
 
 To be honest, I am not excited about this. I know Harper is a formidable opponent and not having to play against him would be nice, but I have never been a big fan of him and he could just as easily not play against us on the Yankees. He came into the MLB as a 19 year old with great hair and a lot of swagger. Compared to Mike Trout, who's about the same age and made his MLB debut the season before Harper, the difference in maturity and humility is stark. All of this is to say, I get the hype around Harper but I'm not convinced his stats and attitude make him an optimal addition to the Phillies.
 
