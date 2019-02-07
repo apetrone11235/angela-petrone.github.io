@@ -26,10 +26,13 @@ On the other hand, Herrara is signed with the Phillies through 2021 with options
 
 The first thing I wanted to know was how the Phillies are expected to do assuming they didn't make any big changes. To do to this, I used the same premise that DePodesta applied: figure out how many runs a team will score vs. how many runs they will allow their opponents to score in a given season and use this to determine wins. As I said before, DePodesta believed that certain stats were better predictors of a player's success than others. For example, traditional scouting puts a lot of emphasis on a player's batting average (BA = number of hits/number of at bats). While it is definitely useful to know how often a player gets a hit, using at bats (AB) rather than plate appearances (PA) is a little misleading if our ultimate goal is to know how many runs a player can generate. For example, a sacrifice fly that causes a runner to score would not count as a hit or an at bat. The same goes for a walk with the bases loaded that forces a run to score.
 
-Fortunately, we have a lot of options when it comes to baseball statistics and as DePodesta found, a player's on-base percentage (OBS) and slugging percentage (SLG) are highly predictive of how many runs they score during the course of a season. 
+Fortunately, we have a lot of options when it comes to baseball statistics and as DePodesta found, a player's on-base percentage (OBS) and slugging percentage (SLG) are highly predictive of how many runs they score during the course of a season.
 
 *OBP = (Hits + Walks + Hit by Pitch)/AB + Hits + Walks + Hit by Pitch + Sacrifice Flies)
 SLG = (Singles + 2xDoubles + 3xTriples + 4xHRs)/AB*
 
 As you can see, these stats tell us much more about a player's ability to get on base and generate runs. Using the Phillies' numbers from the last 50 years, I created the following model: 
 ![]({{site.baseurl}}/img/PhilliesCode1.jpg)
+
+Let's look at how well our model performed:
+![]({{site.baseurl}}/img/PhilliesCode2.jpg)
