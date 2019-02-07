@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Is Bryce Harper Worth it for the Phillies? (part 1)
-tags: baseball
+tags: baseball, Sabermetrics
 published: true
 ---
 
