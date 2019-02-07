@@ -45,4 +45,4 @@ These results looked good to me and aligned with the projections on Baseball-Ref
 
 Just looking at this equation, I felt that it made intuitive sense with its intercept at 81. To confrim this, I looked at Phillies' wins over time
 
-![]({{site.baseurl}}/img/PhilliesCode3.png)
+![]({{site.baseurl}}/img/Phillies Wins Over Time.png)
