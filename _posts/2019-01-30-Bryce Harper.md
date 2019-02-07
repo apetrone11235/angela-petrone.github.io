@@ -32,3 +32,4 @@ Fortunately, we have a lot of options when it comes to baseball statistics and a
 SLG = (Singles + 2xDoubles + 3xTriples + 4xHRs)/AB*
 
 As you can see, these stats tell us much more about a player's ability to get on base and generate runs. Using the Phillies' numbers from the last 50 years, I created the following model: 
+![]({{site.baseurl}}/img/thesi.jpg)
