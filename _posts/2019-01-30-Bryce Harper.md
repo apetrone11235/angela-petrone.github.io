@@ -37,4 +37,5 @@ As you can see, these stats tell us much more about a player's ability to get on
 Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score and allow:
 ![]({{site.baseurl}}/img/PhilliesCode2.png)
 
-As you can see, the results are highly predictive! As an added check on my numbers, I looked at 2019 predictions on Baseball-Reference
+These results looked good to me, so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
+![]({{site.baseurl}}/img/PhilliesCode3.jpg)
