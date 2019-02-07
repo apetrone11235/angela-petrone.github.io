@@ -36,3 +36,5 @@ As you can see, these stats tell us much more about a player's ability to get on
 
 Let's look at how well our model performed:
 ![]({{site.baseurl}}/img/PhilliesCode2.png)
+
+As you can see, the results are highly predictive! As an added check on my numbers, I looked at 2019 predictions on Baseball-Reference
