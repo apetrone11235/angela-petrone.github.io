@@ -15,7 +15,7 @@ As a 26 year old myself who is still waiting to make her MLB debut, I thought I 
 
 If you're unfamiliar with Moneyball, I highly recommend you read the book and/or watch the movie. It's a great and true story of how a Harvard statistician (Paul DePodesta) helped the Oakland A's make the playoffs an astounding number of years in a row on a tight budget. Essentially, DePodesta broke down the game into a couple of key components, built a highly effective predictive model and worked with the general manager, Billy Beane, to recruit players who had excellent numbers in certain areas while eschewing traditional methods of scouting and big name players.
 
-*Fun Philly Fact: Former Phillies GM Ed Wade (an actor, sadly not the actual guy) makes a brief appearance in the movie agreeing to trade for Jeremy Giambi. This was a terrible decision because the guy had stones for hands and was a disaster in the locker room, so you may understand why I'm a little wary of the Phillies' front office decisions.* 
+A key part of DePodesta's observations was that teams need to win 95 games during the regular season in order to make the playoffs. Of course, winning 95 games does not guarantee a playoff birth because a given team could be in a particularly tough division where many teams do very well. However, the NL East is not known for being an overly competitive division and looking at team historic records, this assumption holds up for the purposes of this project.
 
 **The "money" part of Moneyball**
 
@@ -25,14 +25,14 @@ On the other hand, Herrara is signed with the Phillies through 2021 with options
 
 **Predicting how good the Phillies will be in 2019**
 
-The first thing I wanted to know was how the Phillies are expected to do assuming they didn't make any big changes. To do to this, I used the same premise that DePodesta applied: figure out how many runs a team will score vs. how many runs they will allow their opponents to score in a given season and use this to determine wins. As I said before, DePodesta believed that certain stats were better predictors of a player's success than others. For example, traditional scouting puts a lot of emphasis on a player's batting average (BA = number of hits/number of at bats). While it is definitely useful to know how often a player gets a hit, using at bats (AB) rather than plate appearances (PA) is a little misleading if our ultimate goal is to know how many runs a player can generate. For example, a sacrifice fly that causes a runner to score would not count as a hit or an at bat. The same goes for a walk with the bases loaded that forces a run to score.
+The first thing I wanted to know was how the Phillies are expected to do assuming they don't make any big changes. To do to this, I used the same premise that DePodesta applied: figure out how many runs a team will score vs. how many runs they will allow their opponents to score in a given season and use this to determine wins. As I said before, DePodesta believed that certain stats were better predictors of a player's success than others. For example, traditional scouting puts a lot of emphasis on a player's batting average (BA = number of hits/number of at bats). While it is useful to know how often a player gets a hit, using at bats (AB) rather than plate appearances (PA) is a little misleading if our ultimate goal is to know how many runs a player can generate. For example, a sacrifice fly that causes a runner to score would not count as a hit or an at bat. The same goes for a walk with the bases loaded that forces a run to score.
 
 Fortunately, we have a lot of options when it comes to baseball statistics and as DePodesta found, a player's on-base percentage (OBS) and slugging percentage (SLG) are highly predictive of how many runs they score during the course of a season.
 
 *OBP = (Hits + Walks + Hit by Pitch)/AB + Hits + Walks + Hit by Pitch + Sacrifice Flies)
 SLG = (Singles + 2xDoubles + 3xTriples + 4xHRs)/AB*
 
-As you can see, these stats tell us much more about a player's ability to get on base and generate runs. Using the Phillies' numbers from the last 50 years, I created the following dataframe: 
+As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Using the Phillies' numbers from the last 50 years, I created the following dataframe: 
 
 ![]({{site.baseurl}}/img/PhilliesCode1.jpg)
 
@@ -40,11 +40,15 @@ Using this dataframe, I ran two linear regressions to help me make predictions a
 
 ![]({{site.baseurl}}/img/PhilliesCode2.png)
 
-These results looked good to me and aligned with the projections on Baseball-Reference.com, so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
+These results looked good to me and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml), so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
 
 ![]({{site.baseurl}}/img/PhilliesCode3.png)
 
-Just looking at this equation, I felt that it made intuitive sense with its intercept at 81. To confirm this, I looked at Phillies' wins over time
+Just looking at this equation, I thought it made intuitive sense with its intercept at 81. To confirm this, I looked at Phillies' wins over time
 ![]({{site.baseurl}}/img/Phillies Wins Over Time.png)
 
 This graph not only strengthed my confidence in my model, but also highlights some key years in franchise history, namely our World Series wins in 1980 and 2008, as well as our NL Penant wins in 1993 and 2009. (Not to mention our horrific 2015 season where we nearly lost 100 games...)
+
+At this point, I felt that I had a good handle on how the Phillies would do in 2019, namely: RS = 672, RA = 688, RD = -15, W = 80, L = 82
+
+From here, I was able to anaylze the impact Bryce Harper could have on the team. Stay tuned for Part 2
