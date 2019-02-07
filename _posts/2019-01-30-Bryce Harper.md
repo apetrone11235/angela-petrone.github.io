@@ -32,11 +32,14 @@ Fortunately, we have a lot of options when it comes to baseball statistics and a
 SLG = (Singles + 2xDoubles + 3xTriples + 4xHRs)/AB*
 
 As you can see, these stats tell us much more about a player's ability to get on base and generate runs. Using the Phillies' numbers from the last 50 years, I created the following dataframe: 
+
 ![]({{site.baseurl}}/img/PhilliesCode1.jpg)
 
 Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score and allow:
+
 ![]({{site.baseurl}}/img/PhilliesCode2.png)
 
 These results looked good to me, so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
+
 ![]({{site.baseurl}}/img/PhilliesCode3.png)
 
