@@ -35,4 +35,4 @@ As you can see, these stats tell us much more about a player's ability to get on
 ![]({{site.baseurl}}/img/PhilliesCode1.jpg)
 
 Let's look at how well our model performed:
-![]({{site.baseurl}}/img/PhilliesCode2.jpg)
+![]({{site.baseurl}}/img/PhilliesCode2.png)
