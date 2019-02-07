@@ -31,10 +31,10 @@ Fortunately, we have a lot of options when it comes to baseball statistics and a
 *OBP = (Hits + Walks + Hit by Pitch)/AB + Hits + Walks + Hit by Pitch + Sacrifice Flies)
 SLG = (Singles + 2xDoubles + 3xTriples + 4xHRs)/AB*
 
-As you can see, these stats tell us much more about a player's ability to get on base and generate runs. Using the Phillies' numbers from the last 50 years, I created the following model: 
+As you can see, these stats tell us much more about a player's ability to get on base and generate runs. Using the Phillies' numbers from the last 50 years, I created the following dataframe: 
 ![]({{site.baseurl}}/img/PhilliesCode1.jpg)
 
-Let's look at how well our model performed:
+Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score and allow:
 ![]({{site.baseurl}}/img/PhilliesCode2.png)
 
 As you can see, the results are highly predictive! As an added check on my numbers, I looked at 2019 predictions on Baseball-Reference
