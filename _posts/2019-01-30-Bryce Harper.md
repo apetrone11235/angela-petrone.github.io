@@ -39,7 +39,10 @@ Using this dataframe, I ran two linear regressions to help me make predictions a
 
 ![]({{site.baseurl}}/img/PhilliesCode2.png)
 
-These results looked good to me, so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
+These results looked good to me and aligned with the projections on Baseball-Reference.com, so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
 
 ![]({{site.baseurl}}/img/PhilliesCode3.png)
 
+Just looking at this equation, I felt that it made intuitive sense with its intercept at 81. To confrim this, I looked at Phillies' wins over time
+
+![]({{site.baseurl}}/img/PhilliesCode3.png)
