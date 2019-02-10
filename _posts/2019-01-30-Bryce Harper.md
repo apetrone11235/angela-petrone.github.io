@@ -19,7 +19,7 @@ A key part of DePodesta's observations was that teams need to win 95 games durin
 
 **The "money" part of Moneyball**
 
-In Harper's first season in the MLB (2012), he was making the Major Leagues minimum salary which was $500,000 at the time. While we don’t know how big Harper's contract will be in 2019, we do know that he’s leaving the Nationals after making $21.6M last year, so we can safely assume it will be a massive contract. The latest speculations are $300M over 10 years.
+In Harper's first season in the MLB (2012), he was making the MLB's minimum salary which was $500,000 at the time. While we don’t know how big Harper's contract will be in 2019, we do know that he’s leaving the Nationals after making $21.6M last year, so we can safely assume it will be a massive contract. The latest speculations are $300M over 10 years.
 
 On the other hand, Herrara is signed with the Phillies through 2021 with options through 2023. His current contract is $30MM over 5 years. Williams makes the MLB minimum of $553,000 with no long-term contract. 
 
@@ -27,7 +27,7 @@ On the other hand, Herrara is signed with the Phillies through 2021 with options
 
 The first thing I wanted to know was how the Phillies are expected to do assuming they don't make any big changes. To do to this, I used the same premise that DePodesta applied: figure out how many runs a team will score vs. how many runs they will allow their opponents to score in a given season and use this to determine wins. As I said before, DePodesta believed that certain stats were better predictors of a player's success than others. For example, traditional scouting puts a lot of emphasis on a player's batting average (BA = number of hits/number of at bats). While it is useful to know how often a player gets a hit, using at bats (AB) rather than plate appearances (PA) is a little misleading if our ultimate goal is to know how many runs a player can generate. For example, a sacrifice fly that causes a runner to score would not count as a hit or an at bat. The same goes for a walk with the bases loaded that forces a run to score.
 
-Fortunately, we have a lot of options when it comes to baseball statistics and as DePodesta found, a player's on-base percentage (OBS) and slugging percentage (SLG) are highly predictive of how many runs they score during the course of a season.
+Fortunately, we have a lot of options when it comes to baseball statistics and as DePodesta found, a player's on-base percentage (OBP) and slugging percentage (SLG) are highly predictive of how many runs they score throughout the course of a season.
 
 *OBP = (Hits + Walks + Hit by Pitch)/AB + Hits + Walks + Hit by Pitch + Sacrifice Flies)
 SLG = (Singles + 2xDoubles + 3xTriples + 4xHRs)/AB*
@@ -44,11 +44,11 @@ These results looked good to me and aligned with the projections on [Baseball-Re
 
 ![]({{site.baseurl}}/img/PhilliesCode3.png)
 
-Just looking at this equation, I thought it made intuitive sense with its intercept at 81. To confirm this, I looked at Phillies' wins over time
+Just looking at this equation, I thought it intuitively made sense with its intercept at 81. To confirm this, I looked at Phillies' wins over time
 ![]({{site.baseurl}}/img/Phillies Wins Over Time.png)
 
-This graph not only strengthed my confidence in my model, but also highlights some key years in franchise history, namely our World Series wins in 1980 and 2008, as well as our NL Penant wins in 1993 and 2009. (Not to mention our horrific 2015 season where we nearly lost 100 games...)
+This graph not only strengthed my confidence in my model, but also highlighted some key years in franchise history, namely our World Series wins in 1980 and 2008, as well as our NL Penant wins in 1993 and 2009. (Not to mention our horrific 2015 season where we nearly lost 100 games...)
 
-At this point, I felt that I had a good handle on how the Phillies would do in 2019, namely: RS = 672, RA = 688, RD = -15, W = 80, L = 82
+At this point, I felt that I had a good handle on how the Phillies would do in 2019, specifically: RS = 672, RA = 688, RD = -15, W = 80, L = 82
 
 From here, I was able to anaylze the impact Bryce Harper could have on the team. Stay tuned for Part 2
