@@ -47,8 +47,8 @@ These results looked good to me and aligned with the projections on [Baseball-Re
 Just looking at this equation, I thought it intuitively made sense with its intercept at 81. To confirm this, I looked at Phillies' wins over time
 ![]({{site.baseurl}}/img/Phillies Wins Over Time.png)
 
-This graph not only strengthed my confidence in my model, but also highlighted some key years in franchise history, namely our World Series wins in 1980 and 2008, as well as our NL Penant wins in 1993 and 2009. (Not to mention our horrific 2015 season where we nearly lost 100 games...)
+This graph not only strengthened my confidence in my model, but also highlighted some key years in franchise history, namely our World Series wins in 1980 and 2008, as well as our NL Pennant wins in 1993 and 2009. (Not to mention our horrific 2015 season where we nearly lost 100 games...)
 
 At this point, I felt that I had a good handle on how the Phillies would do in 2019, specifically: RS = 672, RA = 688, RD = -15, W = 80, L = 82
 
-From here, I was able to anaylze the impact Bryce Harper could have on the team. Stay tuned for Part 2
+From here, I was able to analyze the impact Bryce Harper could have on the team. Stay tuned for Part 2
