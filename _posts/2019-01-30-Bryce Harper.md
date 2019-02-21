@@ -23,7 +23,7 @@ In Harper's first season in the MLB (2012), he was making the MLB's minimum sala
 
 On the other hand, Herrara is signed with the Phillies through 2021 with options through 2023. His current contract is $30MM over 5 years.
 
-**Predicting how good the Phillies will be in 2019**
+## Predicting how good the Phillies will be in 2019
 
 The first thing I wanted to know was how the Phillies are expected to do assuming they don't make any big changes. To do to this, I used the same premise that DePodesta applied: figure out how many runs a team will score vs. how many runs they will allow their opponents to score in a given season and use this to determine wins. As I said before, DePodesta believed that certain stats were better predictors of a player's success than others. For example, traditional scouting puts a lot of emphasis on a player's batting average (BA = number of hits/number of at bats). While it is useful to know how often a player gets a hit, using at bats (AB) rather than plate appearances (PA) is a little misleading if our ultimate goal is to know how many runs a player can generate. For example, a sacrifice fly that causes a runner to score would not count as a hit or an at bat. The same goes for a walk with the bases loaded that forces a run to score. Both of these instances would count as PAs but not ABs.
 
