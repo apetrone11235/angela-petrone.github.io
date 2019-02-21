@@ -11,7 +11,7 @@ To be honest, I am not excited about this. I know Harper is a formidable opponen
 
 As a 26 year old myself who is still waiting to make her MLB debut, I thought I would try to Moneyball this situation to see if my personal bias against Harper is unwarranted. To do this, I used what I've been learning in my spare time from the helpful folks at [MIT](https://ocw.mit.edu/courses/sloan-school-of-management/15-071-the-analytics-edge-spring-2017/index.htm) to model the Phillies' and Harper's stats to see how he could potentially contribute to the team. I also analyzed the stats of Odubel Herrara (Outfielder, 27 y.o.) who the Phillies are most likely to trade to make room for Harper, should they sign him. Harper and Herrera are both outfielders and typically hit 2nd or 3rd in the batting order.
 
-**Moneyball**
+## Moneyball
 
 If you're unfamiliar with Moneyball, I highly recommend you read the book and/or watch the movie. It's a great and true story of how a Harvard statistician (Paul DePodesta) helped the Oakland A's make the playoffs an astounding number of years in a row on a tight budget. Essentially, DePodesta broke down the game into a couple of key components, built a highly effective predictive model and worked with the general manager, Billy Beane, to recruit players who had excellent numbers in certain areas while eschewing traditional methods of scouting and big name players.
 
