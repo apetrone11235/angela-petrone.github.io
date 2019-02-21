@@ -44,7 +44,7 @@ These results looked good to me and aligned with the projections on [Baseball-Re
 
 ![]({{site.baseurl}}/img/PhilliesCode3.png)
 
-Just looking at this equation, I thought it intuitively made sense with its intercept at 81. To confirm this, I looked at Phillies' wins over time
+Just looking at this equation, I thought it intuitively made sense with its intercept at 81, since teams play 162 games per season. To confirm this, I looked at Phillies' wins over time
 ![]({{site.baseurl}}/img/Phillies Wins Over Time.png)
 
 This graph not only strengthened my confidence in my model, but also highlighted some key years in franchise history, namely our World Series wins in 1980 and 2008, as well as our NL Pennant wins in 1993 and 2009. (Not to mention our horrific 2015 season where we nearly lost 100 games...)
