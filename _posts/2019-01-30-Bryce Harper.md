@@ -84,15 +84,37 @@ summary(Phillies)
  NA's   :26  
  ```
 
+##Linear Regressions
+
 Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score and allow:
 
-![]({{site.baseurl}}/img/PhilliesCode2.png)
+```
+RunsScored = lm(RS ~ OBP + SLG, data =Phillies)
+summary(RunsScored)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-74.37 -11.52   3.49  12.83  55.59 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  -753.88      79.48  -9.486 4.18e-12 ***
+OBP          2556.32     408.25   6.262 1.52e-07 ***
+SLG          1591.61     224.07   7.103 9.13e-09 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 24.26 on 43 degrees of freedom
+Multiple R-squared:  0.9182,	Adjusted R-squared:  0.9144 
+F-statistic: 241.4 on 2 and 43 DF,  p-value: < 2.2e-16
+```
 
 These results looked good to me and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml), so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
 
 ![]({{site.baseurl}}/img/PhilliesCode3.png)
 
 Just looking at this equation, I thought it intuitively made sense with its intercept at 81, since teams play 162 games per season. To confirm this, I looked at Phillies' wins over time
+
 ![]({{site.baseurl}}/img/ggplotWins.png)
 
 This graph not only strengthened my confidence in my model, but also highlighted some key years in franchise history, namely our World Series wins in 1980 and 2008, as well as our NL Pennant wins in 1993 and 2009. (Not to mention our horrific 2015 season where we nearly lost 100 games...)
