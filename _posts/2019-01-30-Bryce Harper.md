@@ -37,7 +37,6 @@ As you can see, these stats tell us much more about a player's ability to get on
 
 ```
 baseball = read.csv("baseball.csv") #only goes to 2012
-summary(baseball)
 Phillies = subset(baseball, Team == "PHI" & Year > 1968)
 #NL East officially formed in 1969
 Phillies$RD = Phillies$RS - Phillies$RA
