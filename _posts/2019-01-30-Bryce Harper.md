@@ -33,7 +33,9 @@ Fortunately, we have a lot of options when it comes to baseball statistics and a
 
 *SLG = (Singles + 2xDoubles + 3xTriples + 4xHRs)/AB*
 
-As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Using the Phillies' numbers from the last 50 years, I created the following dataframe: 
+As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. 
+
+Using the Phillies' numbers from the last 50 years, I created the following dataframe, using the original baseball dataset from MIT's *Analytics Edge* course (sourced from [Baseball-Reference.com](https://www.baseball-reference.com) and removing excess stats I didn't need: 
 
 ```
 baseball = read.csv("baseball.csv") #only goes to 2012
