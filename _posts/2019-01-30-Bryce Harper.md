@@ -35,7 +35,7 @@ Fortunately, we have a lot of options when it comes to baseball statistics and a
 
 As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. 
 
-Using the Phillies' numbers from the last 50 years, I created the following dataframe, using the original baseball dataset from MIT's *Analytics Edge* course (sourced from [Baseball-Reference.com](https://www.baseball-reference.com) and removing excess stats I didn't need: 
+Using the Phillies' numbers from the last 50 years, I created the following dataframe, using the original baseball dataset from MIT's *Analytics Edge* course (sourced from [Baseball-Reference.com](https://www.baseball-reference.com)) and removing excess stats I didn't need: 
 
 ```
 baseball = read.csv("baseball.csv") #only goes to 2012
@@ -48,10 +48,9 @@ Phillies$RankPlayoffs = NULL
 Phillies$RankSeason = NULL
 Phillies$Playoffs = NULL
 ```
-Since this dataset only went to 2012, I needed to add some additional years. I started by creating a dataset with the variables I needed and then adding them to the existing set:
+Since this dataset only went to 2012, I needed to add some additional years. I started by pulling the data I needed from Baseball Reference, creating a dataset, and then adding them to the existing dataframe:
 ```
 total = read.csv("Phillies.csv")
-#this has 136 years of Phillies stats! but for our purposes, we'll keep things in the modern era
 recent = subset(total, Year > 2012)
 Phillies = rbind(recent, Phillies)
 ```
@@ -84,14 +83,15 @@ summary(Phillies)
  NA's   :26  
  ```
 
-##Linear Regressions
+## Linear Regressions
 
 Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score and allow:
 
 ```
 RunsScored = lm(RS ~ OBP + SLG, data =Phillies)
 summary(RunsScored)
-
+```
+```
 Residuals:
    Min     1Q Median     3Q    Max 
 -74.37 -11.52   3.49  12.83  55.59 
