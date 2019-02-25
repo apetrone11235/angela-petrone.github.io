@@ -87,7 +87,7 @@ summary(Phillies)
 
 Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score and allow:
 
-# Runs Scored
+#### Runs Scored
 ```
 RunsScored = lm(RS ~ OBP + SLG, data =Phillies)
 summary(RunsScored)
@@ -110,7 +110,7 @@ Multiple R-squared:  0.9182,	Adjusted R-squared:  0.9144
 F-statistic: 241.4 on 2 and 43 DF,  p-value: < 2.2e-16
 ```
 
-# Runs Allowed
+#### Runs Allowed
 ```
 RunsAllowed = lm(RA ~ OOBP + OSLG, data = Phillies)
 summary(RunsAllowed)
