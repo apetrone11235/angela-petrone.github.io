@@ -90,8 +90,8 @@ Using this dataframe, I ran two linear regressions to help me make predictions a
 ```
 RunsScored = lm(RS ~ OBP + SLG, data =Phillies)
 summary(RunsScored)
-```
-```
+
+
 Residuals:
    Min     1Q Median     3Q    Max 
 -74.37 -11.52   3.49  12.83  55.59 
@@ -111,8 +111,8 @@ F-statistic: 241.4 on 2 and 43 DF,  p-value: < 2.2e-16
 ```
 RunsAllowed = lm(RA ~ OOBP + OSLG, data = Phillies)
 summary(RunsAllowed)
-```
-```
+
+
 Residuals:
     Min      1Q  Median      3Q     Max 
 -39.566 -17.663  -0.786  20.038  46.522 
