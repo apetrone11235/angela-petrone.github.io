@@ -46,9 +46,16 @@ Phillies$RankPlayoffs = NULL
 Phillies$RankSeason = NULL
 Phillies$Playoffs = NULL
 ```
-
+Since this dataset only went to 2012, I needed to add some additional years. I started by creating a dataset with the variables I needed and then adding them to the existing set:
+```
+total = read.csv("Phillies.csv")
+#this has 136 years of Phillies stats! but for our purposes, we'll keep things in the modern era
+recent = subset(total, Year > 2012)
+Phillies = rbind(recent, Phillies)
+```
 Now let's get a sense of what the dataframe looks like:
 ```
+summary(Phillies)
      Year            RS              RA              W               OBP        
  Min.   :1969   Min.   :558.0   Min.   :529.0   Min.   : 63.00   Min.   :0.2980  
  1st Qu.:1982   1st Qu.:647.0   1st Qu.:681.8   1st Qu.: 71.50   1st Qu.:0.3140  
