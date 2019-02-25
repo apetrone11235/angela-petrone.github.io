@@ -35,17 +35,18 @@ Fortunately, we have a lot of options when it comes to baseball statistics and a
 
 As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Using the Phillies' numbers from the last 50 years, I created the following dataframe: 
 
-``` baseball = read.csv("baseball.csv") #only goes to 2012
-```summary(baseball)
-```Phillies = subset(baseball, Team == "PHI" & Year > 1968)
-```#NL East officially formed in 1969
-```Phillies$RD = Phillies$RS - Phillies$RA
-```Phillies$Team = NULL
-```Phillies$League = NULL
-```Phillies$RankPlayoffs = NULL
-```Phillies$RankSeason = NULL
-```Phillies$Playoffs = NULL
-
+```
+baseball = read.csv("baseball.csv") #only goes to 2012
+summary(baseball)
+Phillies = subset(baseball, Team == "PHI" & Year > 1968)
+#NL East officially formed in 1969
+Phillies$RD = Phillies$RS - Phillies$RA
+Phillies$Team = NULL
+Phillies$League = NULL
+Phillies$RankPlayoffs = NULL
+Phillies$RankSeason = NULL
+Phillies$Playoffs = NULL
+```
 ![]({{site.baseurl}}/img/PhilliesCode1.jpg)
 
 Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score and allow:
