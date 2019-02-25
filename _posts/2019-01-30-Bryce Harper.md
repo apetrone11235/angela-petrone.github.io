@@ -47,7 +47,34 @@ Phillies$RankPlayoffs = NULL
 Phillies$RankSeason = NULL
 Phillies$Playoffs = NULL
 ```
-![]({{site.baseurl}}/img/PhilliesCode1.jpg)
+
+Now let's get a sense of what the dataframe looks like:
+```
+     Year            RS              RA              W               OBP        
+ Min.   :1969   Min.   :558.0   Min.   :529.0   Min.   : 63.00   Min.   :0.2980  
+ 1st Qu.:1982   1st Qu.:647.0   1st Qu.:681.8   1st Qu.: 71.50   1st Qu.:0.3140  
+ Median :1994   Median :699.0   Median :718.5   Median : 80.00   Median :0.3270  
+ Mean   :1994   Mean   :710.6   Mean   :719.0   Mean   : 80.54   Mean   :0.3255  
+ 3rd Qu.:2007   3rd Qu.:764.0   3rd Qu.:749.0   3rd Qu.: 88.75   3rd Qu.:0.3370  
+ Max.   :2018   Max.   :892.0   Max.   :846.0   Max.   :102.00   Max.   :0.3540  
+                                                                                 
+      SLG               BA               G            OOBP       
+ Min.   :0.3500   Min.   :0.2330   Min.   :161   Min.   :0.2960  
+ 1st Qu.:0.3762   1st Qu.:0.2490   1st Qu.:162   1st Qu.:0.3207  
+ Median :0.3950   Median :0.2550   Median :162   Median :0.3290  
+ Mean   :0.3973   Mean   :0.2559   Mean   :162   Mean   :0.3273  
+ 3rd Qu.:0.4138   3rd Qu.:0.2655   3rd Qu.:162   3rd Qu.:0.3345  
+ Max.   :0.4580   Max.   :0.2790   Max.   :163   Max.   :0.3470  
+                                                 NA's   :26      
+      OSLG              RD          
+ Min.   :0.3610   Min.   :-186.000  
+ 1st Qu.:0.4065   1st Qu.: -94.250  
+ Median :0.4250   Median : -10.000  
+ Mean   :0.4233   Mean   :  -8.391  
+ 3rd Qu.:0.4472   3rd Qu.:  68.500  
+ Max.   :0.4600   Max.   : 213.000  
+ NA's   :26  
+ ```
 
 Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score and allow:
 
