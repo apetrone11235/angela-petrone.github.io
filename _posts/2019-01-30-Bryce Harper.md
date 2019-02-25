@@ -108,6 +108,28 @@ Residual standard error: 24.26 on 43 degrees of freedom
 Multiple R-squared:  0.9182,	Adjusted R-squared:  0.9144 
 F-statistic: 241.4 on 2 and 43 DF,  p-value: < 2.2e-16
 ```
+```
+RunsAllowed = lm(RA ~ OOBP + OSLG, data = Phillies)
+summary(RunsAllowed)
+```
+```
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-39.566 -17.663  -0.786  20.038  46.522 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)   -796.3      146.3  -5.444 4.37e-05 ***
+OOBP          2548.7      717.1   3.554 0.002441 ** 
+OSLG          1652.0      363.0   4.551 0.000283 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 24.97 on 17 degrees of freedom
+  (26 observations deleted due to missingness)
+Multiple R-squared:  0.9043,	Adjusted R-squared:  0.893 
+F-statistic: 80.29 on 2 and 17 DF,  p-value: 2.182e-09
+```
 
 These results looked good to me and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml), so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
 
