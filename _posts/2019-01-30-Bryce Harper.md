@@ -29,9 +29,7 @@ The first thing I wanted to know was how the Phillies are expected to do assumin
 
 Fortunately, we have a lot of options when it comes to baseball statistics and as DePodesta found, a player's on-base percentage (OBP) and slugging percentage (SLG) are highly predictive of how many runs they score throughout the course of a season.
 
-$$
-OBP = (Hits + Walks + Hit by Pitch)/AB + Hits + Walks + Hit by Pitch + Sacrifice Flies)
-$$
+{{{\large{\textbf{OBP = (Hits + Walks + Hit by Pitch)/AB + Hits + Walks + Hit by Pitch + Sacrifice Flies)}}}}}
 
 *SLG = (Singles + 2xDoubles + 3xTriples + 4xHRs)/AB*
 
