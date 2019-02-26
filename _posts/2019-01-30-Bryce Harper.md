@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: MathJax
 title: Is Bryce Harper a Good Investment for the Phillies? (part 1)
 subtitle: I'm biased so I asked the data
 tags: baseball, Sabermetrics
