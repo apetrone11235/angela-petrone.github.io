@@ -138,9 +138,9 @@ Multiple R-squared:  0.9043,	Adjusted R-squared:  0.893
 F-statistic: 80.29 on 2 and 17 DF,  p-value: 2.182e-09
 ```
 
-These results looked good to me overall and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml). It was no surprise that these models would provide such significant results with high R-squareds, but I was not happy with the large errors. Making the equations provided by the regression output, we have:
+These results looked good to me overall and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml). Making the equations provided by the regression output, we have:
 ```
-Run Scoreds = -753.88 + 2556.32*OBP + 1591.61*SLG
+Run Scored = -753.88 + 2556.32*OBP + 1591.61*SLG
 
 Runs Allowed = -796.3 + 2548.7*OOBP + 1652.0*OSLG
 
@@ -165,6 +165,11 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 3.815 on 44 degrees of freedom
 Multiple R-squared:  0.8807,	Adjusted R-squared:  0.878 
 F-statistic: 324.9 on 1 and 44 DF,  p-value: < 2.2e-16
+```
+This gives us the following equation:
+
+```
+Wins = 81.36 + 0.097*RD
 ```
 
 Just looking at this equation, I thought it intuitively made sense with its intercept at 81, since teams play 162 games per season. To confirm this, I looked at Phillies' wins over time
