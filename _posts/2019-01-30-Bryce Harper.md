@@ -29,7 +29,6 @@ The first thing I wanted to know was how the Phillies are expected to do assumin
 
 Fortunately, we have a lot of options when it comes to baseball statistics and as DePodesta found, a player's on-base percentage (OBP) and slugging percentage (SLG) are highly predictive of how many runs they score throughout the course of a season.
 
-
 ```
 OBP = (Hits + Walks + Hit by Pitch)/AB + Hits + Walks + Hit by Pitch + Sacrifice Flies)
 SLG = (Singles + 2*Doubles + 3*Triples + 4*HRs)/AB
@@ -139,9 +138,13 @@ Multiple R-squared:  0.9043,	Adjusted R-squared:  0.893
 F-statistic: 80.29 on 2 and 17 DF,  p-value: 2.182e-09
 ```
 
-These results looked good to me and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml), so I moved on to running a regression to predict wins using run difference
+These results looked good to me overall and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml). It was no surprise that these models would provide such significant results with high R-squareds, but I was not happy with the large errors. Making the equations provided by the regression output, we have:
+```
+Run Scoreds = -753.88 + 2556.32*OBP + 1591.61*SLG
 
+Runs Allowed = -796.3 + 2548.7*OOBP + 1652.0*OSLG
 
+```
 #### Wins
 ```
 Wins = lm(W ~ RD, data = Phillies)
