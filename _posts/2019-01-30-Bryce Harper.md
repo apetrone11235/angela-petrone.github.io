@@ -42,7 +42,9 @@ Using the Phillies' numbers from the last 50 years, I created the following data
 ```
 baseball = read.csv("baseball.csv") #only goes to 2012
 Phillies = subset(baseball, Team == "PHI" & Year > 1968)
+
 #NL East officially formed in 1969
+
 Phillies$RD = Phillies$RS - Phillies$RA
 Phillies$Team = NULL
 Phillies$League = NULL
