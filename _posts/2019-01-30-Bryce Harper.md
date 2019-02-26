@@ -32,6 +32,7 @@ Fortunately, we have a lot of options when it comes to baseball statistics and a
 
 ```
 OBP = (Hits + Walks + Hit by Pitch)/AB + Hits + Walks + Hit by Pitch + Sacrifice Flies)
+
 SLG = (Singles + 2*Doubles + 3*Triples + 4*HRs)/AB
 ```
 
