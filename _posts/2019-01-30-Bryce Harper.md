@@ -31,7 +31,7 @@ Fortunately, we have a lot of options when it comes to baseball statistics and a
 
 ```
 OBP = (Hits + Walks + Hit by Pitch)/AB + Hits + Walks + Hit by Pitch + Sacrifice Flies)
-SLG = (Singles + 2xDoubles + 3xTriples + 4xHRs)/AB
+SLG = (Singles + 2*Doubles + 3*Triples + 4*HRs)/AB
 ```
 
 As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Similarly, a team's opponent's OBP (OOBP) and SLG (OSLG) are indicative of how many runs a team will allow against given opponents.
@@ -138,6 +138,9 @@ Multiple R-squared:  0.9043,	Adjusted R-squared:  0.893
 F-statistic: 80.29 on 2 and 17 DF,  p-value: 2.182e-09
 ```
 
+These results looked good to me and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml), so I moved on to running a regression to predict wins using run difference
+
+
 #### Wins
 ```
 Wins = lm(W ~ RD, data = Phillies)
@@ -159,10 +162,6 @@ Residual standard error: 3.815 on 44 degrees of freedom
 Multiple R-squared:  0.8807,	Adjusted R-squared:  0.878 
 F-statistic: 324.9 on 1 and 44 DF,  p-value: < 2.2e-16
 ```
-
-These results looked good to me and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml), so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
-
-![]({{site.baseurl}}/img/PhilliesCode3.png)
 
 Just looking at this equation, I thought it intuitively made sense with its intercept at 81, since teams play 162 games per season. To confirm this, I looked at Phillies' wins over time
 
