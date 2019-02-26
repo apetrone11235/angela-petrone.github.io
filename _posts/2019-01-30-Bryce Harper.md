@@ -87,7 +87,9 @@ summary(Phillies)
 
 Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score and allow:
 
+
 #### Runs Scored
+
 ```
 RunsScored = lm(RS ~ OBP + SLG, data =Phillies)
 summary(RunsScored)
@@ -111,6 +113,7 @@ F-statistic: 241.4 on 2 and 43 DF,  p-value: < 2.2e-16
 ```
 
 #### Runs Allowed
+
 ```
 RunsAllowed = lm(RA ~ OOBP + OSLG, data = Phillies)
 summary(RunsAllowed)
@@ -132,6 +135,28 @@ Residual standard error: 24.97 on 17 degrees of freedom
   (26 observations deleted due to missingness)
 Multiple R-squared:  0.9043,	Adjusted R-squared:  0.893 
 F-statistic: 80.29 on 2 and 17 DF,  p-value: 2.182e-09
+```
+
+#### Wins
+```
+Wins = lm(W ~ RD, data = Phillies)
+summary(WinsModern)
+
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-8.6347 -2.7141  0.3276  2.7372  7.7286 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 81.359516   0.564342  144.17   <2e-16 ***
+RD           0.097248   0.005395   18.02   <2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 3.815 on 44 degrees of freedom
+Multiple R-squared:  0.8807,	Adjusted R-squared:  0.878 
+F-statistic: 324.9 on 1 and 44 DF,  p-value: < 2.2e-16
 ```
 
 These results looked good to me and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml), so I moved on to running a regression to predict wins using run difference (RD = Runs Scored - Runs Allowed)
