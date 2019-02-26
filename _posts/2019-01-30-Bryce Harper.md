@@ -87,6 +87,8 @@ summary(Phillies)
  NA's   :26  
  ```
 
+This generally looks good, with the exception of OOBP and OSLG where we have 26 NA's in each! Isolating these variables, it is clear that these stats were not collected by Baseball-Reference until 1992. This is unfortunate and points out an issue with data analytics in sports today: while we are very good at collecting data now, it may take years to see what new stats are actually predictive and which are not.
+
 ## Linear Regressions
 
 Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score, how many they will allow, and finally, how that translates into wins:
