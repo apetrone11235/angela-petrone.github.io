@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Is Bryce Harper Worth it for the Phillies? (part 1)
+title: Is Bryce Harper a Good Investment for the Phillies? (part 1)
+subtitle: I'm biased so I asked that data
 tags: baseball, Sabermetrics
 published: true
 ---
