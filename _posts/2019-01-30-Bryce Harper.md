@@ -85,7 +85,7 @@ summary(Phillies)
 
 ## Linear Regressions
 
-Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score and allow:
+Using this dataframe, I ran two linear regressions to help me make predictions about how many runs the Phillies will score, how many they will allow, and finally, how that translates into wins:
 
 
 #### Runs Scored
