@@ -52,7 +52,7 @@ Phillies$RankPlayoffs = NULL
 Phillies$RankSeason = NULL
 Phillies$Playoffs = NULL
 ```
-Since this dataset only went to 2012, I needed to add some additional years. I started by pulling the data I needed from Baseball Reference, creating a dataset, and then adding them to the existing dataframe:
+Since this dataset only went to 2012, I needed to add some additional years. I started by pulling the data I needed from Baseball- Reference, creating a dataset, and then adding them to the existing dataframe:
 ```
 total = read.csv("Phillies.csv")
 recent = subset(total, Year > 2012)
