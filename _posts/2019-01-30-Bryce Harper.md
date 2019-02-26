@@ -30,7 +30,7 @@ The first thing I wanted to know was how the Phillies are expected to do assumin
 
 Fortunately, we have a lot of options when it comes to baseball statistics and as DePodesta found, a player's on-base percentage (OBP) and slugging percentage (SLG) are highly predictive of how many runs they score throughout the course of a season.
 
-![objectives]({{site.baseurl}}/img/thesi.jpg)
+![]({{site.baseurl}}/img/OBPformula.png)
 
 As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Similarly, a team's opponent's OBP (OOBP) and SLG (OSLG) are indicative of how many runs a team will allow against given opponents.
 
