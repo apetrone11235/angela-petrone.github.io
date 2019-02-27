@@ -19,3 +19,7 @@ The first thing I noticed about this graph was the inconsistency in production o
 While these two seasons are definitely critical for understanding Harper as an offensive player, they make his stats pretty challenging to predict. For example, when I took a look at the relationship between runs scored, OBP and SLG, I got this:
 
 ![]({{site.baseurl}}/img/bhHittingStatsgg.png)
+
+This was not a welcome discovery, so I decided to see what other significant statistical relationships I could find to predict Harper's run production. After some trial and error, I found that the relationship between runs scored, total bases (TB) and runs batted in (RBIs) was strong, which intuitively made sense to me. 
+
+![]({{site.baseurl}}/img/bhTBRBIgg.png)
