@@ -23,3 +23,6 @@ While these two seasons are definitely critical for understanding Harper as an o
 This was not a welcome discovery, so I decided to see what other significant statistical relationships I could find to predict Harper's run production. After some trial and error, I found that the relationship between runs scored, total bases (TB) and runs batted in (RBIs) was strong, which intuitively made sense to me. 
 
 ![]({{site.baseurl}}/img/bhTBRBIgg.png)
+
+Since I was off the beaten path set by Paul DePodesta at this point, I wanted to run some tests to make sure performing linear regression anlysis on these data would be valid.
+
