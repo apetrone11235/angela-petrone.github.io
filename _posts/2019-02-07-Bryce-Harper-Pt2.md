@@ -24,5 +24,5 @@ This was not a welcome discovery, so I decided to see what other significant sta
 
 ![]({{site.baseurl}}/img/bhTBRBIgg.png)
 
-Since I was off the beaten path set by Paul DePodesta at this point, I wanted to run some tests to make sure performing linear regression anlysis on these data would be valid.
+Since I was off the beaten path set by Paul DePodesta at this point, I wanted to run some tests to make sure performing linear regression analysis on these data would be valid.
 
