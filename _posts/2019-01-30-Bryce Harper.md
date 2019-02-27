@@ -1,5 +1,5 @@
 ---
-layout: KaTeX
+layout: post
 title: Is Bryce Harper a Good Investment for the Phillies? (part 1)
 subtitle: I'm biased so I asked the data
 tags: baseball, Sabermetrics
@@ -30,7 +30,8 @@ The first thing I wanted to know was how the Phillies are expected to do assumin
 
 Fortunately, we have a lot of options when it comes to baseball statistics and as DePodesta found, a player's on-base percentage (OBP) and slugging percentage (SLG) are highly predictive of how many runs they score throughout the course of a season.
 
-![]({{site.baseurl}}/img/OBPformula.png)<!-- .element height="50%" width="50%" -->
+![]({{site.baseurl}}/img/OBPformula.png)
+![test image size](/img/OBPformula.png){:height="50%" width="50%"}
 
 As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Similarly, a team's opponent's OBP (OOBP) and SLG (OSLG) are indicative of how many runs a team will allow against given opponents.
 
