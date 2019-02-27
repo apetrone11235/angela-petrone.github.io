@@ -32,7 +32,7 @@ Fortunately, we have a lot of options when it comes to baseball statistics and a
 
 ![]({{site.baseurl}}/img/OBPformula.png){:height="50%" width="50%"}
 
-As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Similarly, a team's opponent's OBP (OOBP) and SLG (OSLG) are indicative of how many runs a team will allow against given opponents.
+As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Similarly, a team's opponent's OBP (OOBP) and SLG (OSLG) are indicative of how many runs a team will allow against a given opponent.
 
 Using the Phillies' numbers from the last 49 years, I created the following dataframe, using the original baseball dataset from MIT's *Analytics Edge* course (sourced from [Baseball-Reference.com](https://www.baseball-reference.com)), adding a variable for run difference (RD = runs scored - runs allowed) and removing excess variables I didn't need: 
 
@@ -84,7 +84,23 @@ summary(Phillies)
  NA's   :26  
  ```
 
-This generally looks good, with the exception of OOBP and OSLG where we have 26 NA's in each! Isolating these variables, it is clear that these stats were not collected by Baseball-Reference until 1992. This is unfortunate and points out an issue with data analytics in sports today: while we are very good at collecting data now, it may take years to see what new stats are actually predictive and which are not.
+This generally looks good, with the exception of OOBP and OSLG where we have 26 NA's in each! Isolating these variables, it is clear that these stats were not collected by Baseball-Reference until 1992. This is unfortunate but not catastrophic considering 1999 was somehow 20 years ago.
+
+```
+table(Phillies$OOBP > 0, Phillies$Year)
+
+      1969 1970 1971 1973 1974 1975 1976 1977 1978 1979 1980 1982 1983 1984 1985
+  TRUE    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+      
+       1986 1987 1988 1989 1990 1991 1992 1993 1996 1997 1998 1999 2000 2001 2002
+  TRUE    0    0    0    0    0    0    0    0    0    0    0    1    1    1    1
+      
+       2003 2004 2005 2006 2007 2008 2009 2010 2011 2012 2013 2014 2015 2016 2017
+  TRUE    1    1    1    1    1    1    1    1    1    1    1    1    1    1    1
+      
+       2018
+  TRUE    1
+  ```
 
 ## Linear Regressions
 
