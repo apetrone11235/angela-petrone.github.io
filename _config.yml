@@ -158,7 +158,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "KaTeX"
+      layout: "post"
       comments: true  # add comments to all blog posts
       social-share: true # add social media sharing buttons to all blog posts
   -
@@ -201,7 +201,7 @@ prose:
       - name: "layout"
         field:
           element: "hidden"
-          value: "KaTeX"
+          value: "post"
       - name: "title"
         field:
           element: "text"
