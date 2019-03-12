@@ -34,7 +34,7 @@ Graphically, this looked pretty good so I went ahead and created the model:
 
 which produced the following:
 
-``
+```
 Call:
 lm(formula = R ~ RBI + TB, data = BryceHarperHitting)
 
@@ -52,4 +52,5 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 
 Residual standard error: 4.997 on 5 degrees of freedom
 Multiple R-squared:  0.9709,	Adjusted R-squared:  0.9593 
-F-statistic: 83.45 on 2 and 5 DF,  p-value: 0.0001443``
+F-statistic: 83.45 on 2 and 5 DF,  p-value: 0.0001443
+```
