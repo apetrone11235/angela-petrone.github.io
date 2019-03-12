@@ -20,9 +20,36 @@ While these two seasons are definitely critical for understanding Harper as an o
 
 ![]({{site.baseurl}}/img/bhHittingStatsgg.png)
 
-This was not a welcome discovery, so I decided to see what other significant statistical relationships I could find to predict Harper's run production. After some trial and error, I found that the relationship between runs scored, total bases (TB) and runs batted in (RBIs) was strong, which intuitively made sense to me. 
+This was not a welcome discovery, so I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production. I will spare you the details of all of my exploration, but I want to highlight three models and explain their shortcomings. 
+
+#### Model 1 - Total Bases + RBIs
+
+Thinking about what variables could be natural predictors for runs scored, I started by looking at total bases (TB) and runs batted in (RBIs). 
 
 ![]({{site.baseurl}}/img/bhTBRBIgg.png)
 
-Since I was off the beaten path set by Paul DePodesta at this point, I wanted to run some tests to make sure performing linear regression analysis on these data would be valid.
+Graphically, this looked pretty good so I went ahead and created the model:
 
+``lm <- lm(R ~ RBI + TB, data = BryceHarperHitting) ``
+
+which produced the following:
+
+``
+Call:
+lm(formula = R ~ RBI + TB, data = BryceHarperHitting)
+
+Residuals:
+      1       2       3       4       5       6       7       8 
+-0.6919  3.4054  1.4362 -6.1972 -5.2911  0.8353  6.6049 -0.1017 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)   
+(Intercept) -20.20948    8.80053  -2.296  0.07009 . 
+RBI           0.36256    0.11532   3.144  0.02555 * 
+TB            0.32104    0.05201   6.173  0.00162 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 4.997 on 5 degrees of freedom
+Multiple R-squared:  0.9709,	Adjusted R-squared:  0.9593 
+F-statistic: 83.45 on 2 and 5 DF,  p-value: 0.0001443``
