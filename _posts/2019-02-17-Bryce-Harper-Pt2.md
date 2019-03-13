@@ -174,9 +174,9 @@ plot(lm2)
 summary(lm2$residuals) #mean = 0
 var(lm2$residuals) #6.76
 sd(lm2$residuals) # sd = 2.60
-lmtest::bptest(lm5) #p-value > 0.05, df = 3
-car::ncvTest(lm5) #p-value > 0.05, Chisquare = 0.0118
-hist(lm5$residuals)
+lmtest::bptest(lm2) #p-value > 0.05, df = 3
+car::ncvTest(lm2) #p-value > 0.05, Chisquare = 0.0118
+hist(lm2$residuals)
 ```
 3. Look for normality in the distribution of the residuals (using oslrr package)
 
