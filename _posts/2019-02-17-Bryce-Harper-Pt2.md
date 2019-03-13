@@ -103,3 +103,4 @@ ols_test_correlation(lm)
 ```
 ols_plot_resid_hist(lm)
 ```
+![]({{site.baseurl}}/img/ResHistlm.png)
