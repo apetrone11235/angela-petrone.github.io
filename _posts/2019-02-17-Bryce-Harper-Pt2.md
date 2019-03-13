@@ -95,6 +95,7 @@ Cramer-von Mises          0.1967         0.2771
 Anderson-Darling          0.706          0.0390 
 -----------------------------------------------
 ```
+```
 ols_test_correlation(lm)
 > 0.99
 ```
