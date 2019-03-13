@@ -129,8 +129,8 @@ Graphically, Harper's stats look like this:
 
 From here, I built my model
 ```
-lm5 <- lm(R ~ OBP + SLG + PA, data = BryceHarperHitting)
-summary(lm5)
+lm2 <- lm(R ~ OBP + SLG + PA, data = BryceHarperHitting)
+summary(lm2)
 
 Call:
 lm(formula = R ~ OBP + SLG + PA, data = BryceHarperHitting)
@@ -156,21 +156,29 @@ F-statistic: 119.5 on 3 and 4 DF,  p-value: 0.0002273
 Since adding PAs to the original model clearly helped, I moved onto running diagnostic tests, starting with checking for collinearity.
 
 ```
-cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP) #0.003
-cov(BryceHarperHitting$SLG, BryceHarperHitting$PA) #2.33
-cov(BryceHarperHitting$OBP, BryceHarperHitting$PA) #1.55
+cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP)
+> 0.003
+cov(BryceHarperHitting$SLG, BryceHarperHitting$PA)
+> 2.33
+cov(BryceHarperHitting$OBP, BryceHarperHitting$PA)
+> 1.55
+```
+Again, we see a positive relatioship between some of the variables which is not ideal.
 
+```
 # 2. Check for heterskedacity
-plot(lm5)
-summary(lm5$residuals) #mean = 0
-var(lm5$residuals) #6.76
-sd(lm5$residuals) # sd = 2.60
+plot(lm2)
+summary(lm2$residuals) #mean = 0
+var(lm2$residuals) #6.76
+sd(lm2$residuals) # sd = 2.60
 lmtest::bptest(lm5) #p-value > 0.05, df = 3
 car::ncvTest(lm5) #p-value > 0.05, Chisquare = 0.0118
-hist(lm5$residuals) #eek
+hist(lm5$residuals)
+```
+Third, I wanted to take a look at the residuals, again using the olsrr package:
 
-# 3. Check is residuals are normally distrubuted (installed olsrr pckg)
-ols_plot_resid_qq(lm5) #not great but pretty good
+```
+ols_plot_resid_qq(lm5)
 ols_test_normality(lm5) #Only K-S is high
 
 -----------------------------------------------
