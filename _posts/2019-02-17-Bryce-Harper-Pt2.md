@@ -83,6 +83,7 @@ Using the olsrr package, I ran the following
 ```
 ols_plot_resid_qq(lm)
 ```
+![]({{site.baseurl}}/img/Q-Q lm.png)
 ```
 ols_test_normality(lm)
 
