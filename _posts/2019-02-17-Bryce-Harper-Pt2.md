@@ -198,4 +198,4 @@ ols_test_correlation(lm5)
 > 0.97
 ols_plot_resid_hist(lm5)
 ```
-![]({{site.baseurl}}/img/PAbh5.png)
+![]({{site.baseurl}}/img/ResHistlm5.png)
