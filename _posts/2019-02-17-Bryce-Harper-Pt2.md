@@ -3,7 +3,7 @@ layout: post
 title: Is Bryce Harper a Good Investment for the Phillies? (part 2)
 subtitle: I'm biased so I asked the data
 tags: baseball Sabermetrics
-published: true
+published: false
 ---
 
 ## How good is Bryce Harper?
@@ -153,7 +153,9 @@ Multiple R-squared:  0.989,	Adjusted R-squared:  0.9807
 F-statistic: 119.5 on 3 and 4 DF,  p-value: 0.0002273
 ```
 
-Since adding PAs to the original model clearly helped, I moved onto running diagnostic tests, starting with checking for collinearity.
+Since adding PAs to the original model clearly helped, I moved onto running diagnostic tests:
+
+1. Check for collinearity
 
 ```
 cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP)
@@ -163,10 +165,11 @@ cov(BryceHarperHitting$SLG, BryceHarperHitting$PA)
 cov(BryceHarperHitting$OBP, BryceHarperHitting$PA)
 > 1.55
 ```
-Again, we see a positive relatioship between some of the variables which is not ideal.
+
+
+2. Check for heterskedacity
 
 ```
-# 2. Check for heterskedacity
 plot(lm2)
 summary(lm2$residuals) #mean = 0
 var(lm2$residuals) #6.76
@@ -175,7 +178,7 @@ lmtest::bptest(lm5) #p-value > 0.05, df = 3
 car::ncvTest(lm5) #p-value > 0.05, Chisquare = 0.0118
 hist(lm5$residuals)
 ```
-Third, I wanted to take a look at the residuals, again using the olsrr package:
+3. Look for normality in the distribution of the residuals (using oslrr package)
 
 ```
 ols_plot_resid_qq(lm5)
@@ -189,7 +192,10 @@ Kolmogorov-Smirnov        0.1852         0.9032
 Cramer-von Mises          0.7028         0.0104 
 Anderson-Darling          0.2668         0.5793 
 -----------------------------------------------
-
-ols_test_correlation(lm5) #0.97
-ols_plot_resid_hist(lm5) #this doesn't look so great
 ```
+```
+ols_test_correlation(lm5)
+> 0.97
+ols_plot_resid_hist(lm5)
+```
+![]({{site.baseurl}}/img/PAbh5.png)
