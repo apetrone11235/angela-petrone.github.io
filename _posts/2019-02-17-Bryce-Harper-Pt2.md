@@ -84,6 +84,8 @@ Using the olsrr package, I ran the following
 ols_plot_resid_qq(lm)
 ```
 ![]({{site.baseurl}}/img/QQlm.png)
+
+Here we see that our Q-Q plot leaves something to be desired. Not only do we see a siginifant outlier, but there are two other points that fall off the fit line.
 ```
 ols_test_normality(lm)
 
@@ -96,6 +98,8 @@ Cramer-von Mises          0.1967         0.2771
 Anderson-Darling          0.706          0.0390 
 -----------------------------------------------
 ```
+
+We can see here that the Shapiro-Wilk and Anderson-Darling tests just barely support the null hypothesis while the Kolmogorov-Smirnow and Cramer-von Mises tests do not (i.e. this result does not satisfactorily prove that the residuals of this model are normally distributed).
 ```
 ols_test_correlation(lm)
 > 0.99
@@ -104,3 +108,13 @@ ols_test_correlation(lm)
 ols_plot_resid_hist(lm)
 ```
 ![]({{site.baseurl}}/img/ResHistlm.png)
+
+We can see on this histogram that the mean of the residuals is clearly at 0 but the data are skewed.
+
+Finally, I calculated the standard deviation and variance of the residuals:
+```
+var(lm$residuals)
+> 3.85
+sd(lm$residuals)
+> 1.96
+```
