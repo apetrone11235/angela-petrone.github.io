@@ -181,8 +181,8 @@ hist(lm5$residuals)
 3. Look for normality in the distribution of the residuals (using oslrr package)
 
 ```
-ols_plot_resid_qq(lm5)
-ols_test_normality(lm5) #Only K-S is high
+ols_plot_resid_qq(lm2)
+ols_test_normality(lm2)
 
 -----------------------------------------------
        Test             Statistic       pvalue  
@@ -194,8 +194,8 @@ Anderson-Darling          0.2668         0.5793
 -----------------------------------------------
 ```
 ```
-ols_test_correlation(lm5)
+ols_test_correlation(lm2)
 > 0.97
-ols_plot_resid_hist(lm5)
+ols_plot_resid_hist(lm2)
 ```
 ![]({{site.baseurl}}/img/ResHistlm5.png)
