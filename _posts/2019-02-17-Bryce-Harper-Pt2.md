@@ -58,18 +58,46 @@ Seeing this result, my main concerns were the error term and lack of significanc
 
 ```
 cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP)
-cov(BryceHarperHitting$SLG, BryceHarperHitting$TB)
-cov(BryceHarperHitting$SLG, BryceHarperHitting$RBI)
-cov(BryceHarperHitting$OBP, BryceHarperHitting$RBI)
-cov(BryceHarperHitting$OBP, BryceHarperHitting$TB)
+> 0.003
 ```
-which produced 0.003, 2.98, 1.15, 0.69, and 1.31, respectively. Again, I was not totally happy with these results but I wanted to look at the residuals to have a more comprehensive way to compare potential predictive models. 
+```
+cov(BryceHarperHitting$SLG, BryceHarperHitting$TB)
+> 2.98
+```
+```
+cov(BryceHarperHitting$SLG, BryceHarperHitting$RBI)
+> 1.15
+```
+```
+cov(BryceHarperHitting$OBP, BryceHarperHitting$RBI)
+> 0.69
+```
+```
+cov(BryceHarperHitting$OBP, BryceHarperHitting$TB)
+>1.31
+```
+Again, I was not totally happy with these results but I wanted to look at the residuals to have a more comprehensive way to compare potential predictive models. 
 
 Using the olsrr package, I ran the following 
 
 ```
 ols_plot_resid_qq(lm)
+```
+```
 ols_test_normality(lm)
+
+-----------------------------------------------
+       Test             Statistic       pvalue  
+-----------------------------------------------
+Shapiro-Wilk              0.8183         0.0448 
+Kolmogorov-Smirnov        0.2955         0.4085 
+Cramer-von Mises          0.1967         0.2771 
+Anderson-Darling          0.706          0.0390 
+-----------------------------------------------
+```
 ols_test_correlation(lm)
+> 0.99
+```
+```
 ols_plot_resid_hist(lm)
 ```
