@@ -54,3 +54,22 @@ Residual standard error: 4.997 on 5 degrees of freedom
 Multiple R-squared:  0.9709,	Adjusted R-squared:  0.9593 
 F-statistic: 83.45 on 2 and 5 DF,  p-value: 0.0001443
 ```
+Seeing this result, my main concerns were the error term and lack of significance on the intercept, but I wanted to run some diagnostic tests on the model before writing it off. The first thing I checked for was if there was collinearity between variables
+
+```
+cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP)
+cov(BryceHarperHitting$SLG, BryceHarperHitting$TB)
+cov(BryceHarperHitting$SLG, BryceHarperHitting$RBI)
+cov(BryceHarperHitting$OBP, BryceHarperHitting$RBI)
+cov(BryceHarperHitting$OBP, BryceHarperHitting$TB)
+```
+which produced 0.003, 2.98, 1.15, 0.69, and 1.31, respectively. Again, I was not totally happy with these results but I wanted to look at the residuals to have a more comprehensive way to compare potential predictive models. 
+
+Using the olsrr package, I ran the following 
+
+```
+ols_plot_resid_qq(lm)
+ols_test_normality(lm)
+ols_test_correlation(lm)
+ols_plot_resid_hist(lm)
+```
