@@ -127,3 +127,29 @@ Graphically, Harper's stats look like this:
 
 ![]({{site.baseurl}}/img/PAbh5.png)
 
+From here, I built my model
+```
+lm5 <- lm(R ~ OBP + SLG + PA, data = BryceHarperHitting)
+summary(lm5)
+
+Call:
+lm(formula = R ~ OBP + SLG + PA, data = BryceHarperHitting)
+
+Residuals:
+       1        2        3        4        5        6        7        8 
+-0.55857  4.05017  2.94722 -2.95191 -2.53824 -2.28508  0.08549  1.25092 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  -42.46744   14.77506  -2.874 0.045274 *  
+OBP         -336.89958   82.61986  -4.078 0.015127 *  
+SLG          309.39699   40.89223   7.566 0.001636 ** 
+PA             0.17981    0.01325  13.573 0.000171 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 3.441 on 4 degrees of freedom
+Multiple R-squared:  0.989,	Adjusted R-squared:  0.9807 
+F-statistic: 119.5 on 3 and 4 DF,  p-value: 0.0002273
+```
+
