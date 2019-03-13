@@ -22,7 +22,7 @@ While these two seasons are definitely critical for understanding Harper as an o
 
 This was not a welcome discovery, so I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production. I will spare you the details of all of my exploration, but I want to highlight three models and explain their shortcomings. 
 
-#### Model 1 - Total Bases + RBIs
+### Model 1 - Total Bases + RBIs
 
 Thinking about what variables could be natural predictors for runs scored, I started by looking at total bases (TB) and runs batted in (RBIs). 
 
@@ -118,3 +118,11 @@ var(lm$residuals)
 sd(lm$residuals)
 > 1.96
 ```
+
+### Model 2 - OBP + SLG + PA
+
+Finding my first model unsatisfactory, I tried to think about other variables that could strengthen the original model. As I discussed in the first part of this post, plate appearances (PA) are the number of times a player steps to the plate, regardless of the outcome. I figured that knowing how ofter a player has a chance to hit would probably be indicative of how much they actually hit. This is a standard strategy in baseball evidenced by managers putting their best hitters early in the lineup to get them more PAs.
+
+Graphically, Harper's stats look like this:
+
+![]({{site.baseurl}}/img/PAbh5.png)
