@@ -2,7 +2,7 @@
 layout: post
 title: Is Bryce Harper a Good Investment for the Phillies? (part 2)
 subtitle: I'm biased so I asked the data
-tags: baseball, Sabermetrics
+tags: baseball Sabermetrics
 published: true
 ---
 
@@ -126,3 +126,4 @@ Finding my first model unsatisfactory, I tried to think about other variables th
 Graphically, Harper's stats look like this:
 
 ![]({{site.baseurl}}/img/PAbh5.png)
+
