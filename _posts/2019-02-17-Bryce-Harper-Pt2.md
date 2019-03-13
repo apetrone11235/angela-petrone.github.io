@@ -74,7 +74,7 @@ cov(BryceHarperHitting$OBP, BryceHarperHitting$RBI)
 ```
 ```
 cov(BryceHarperHitting$OBP, BryceHarperHitting$TB)
->1.31
+> 1.31
 ```
 Again, I was not totally happy with these results but I wanted to look at the residuals to have a more comprehensive way to compare potential predictive models. 
 
