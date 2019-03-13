@@ -172,6 +172,16 @@ hist(lm5$residuals) #eek
 # 3. Check is residuals are normally distrubuted (installed olsrr pckg)
 ols_plot_resid_qq(lm5) #not great but pretty good
 ols_test_normality(lm5) #Only K-S is high
+
+-----------------------------------------------
+       Test             Statistic       pvalue  
+-----------------------------------------------
+Shapiro-Wilk              0.9275         0.4940 
+Kolmogorov-Smirnov        0.1852         0.9032 
+Cramer-von Mises          0.7028         0.0104 
+Anderson-Darling          0.2668         0.5793 
+-----------------------------------------------
+
 ols_test_correlation(lm5) #0.97
 ols_plot_resid_hist(lm5) #this doesn't look so great
 ```
