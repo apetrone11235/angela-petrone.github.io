@@ -153,3 +153,25 @@ Multiple R-squared:  0.989,	Adjusted R-squared:  0.9807
 F-statistic: 119.5 on 3 and 4 DF,  p-value: 0.0002273
 ```
 
+Since adding PAs to the original model clearly helped, I moved onto running diagnostic tests, starting with checking for collinearity.
+
+```
+cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP) #0.003
+cov(BryceHarperHitting$SLG, BryceHarperHitting$PA) #2.33
+cov(BryceHarperHitting$OBP, BryceHarperHitting$PA) #1.55
+
+# 2. Check for heterskedacity
+plot(lm5)
+summary(lm5$residuals) #mean = 0
+var(lm5$residuals) #6.76
+sd(lm5$residuals) # sd = 2.60
+lmtest::bptest(lm5) #p-value > 0.05, df = 3
+car::ncvTest(lm5) #p-value > 0.05, Chisquare = 0.0118
+hist(lm5$residuals) #eek
+
+# 3. Check is residuals are normally distrubuted (installed olsrr pckg)
+ols_plot_resid_qq(lm5) #not great but pretty good
+ols_test_normality(lm5) #Only K-S is high
+ols_test_correlation(lm5) #0.97
+ols_plot_resid_hist(lm5) #this doesn't look so great
+```
