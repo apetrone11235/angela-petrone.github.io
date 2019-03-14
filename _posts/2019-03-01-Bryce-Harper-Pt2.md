@@ -165,12 +165,13 @@ Now let's see how this will impact their winning potential using the model equat
 ```
 Wins = 81.36 + 0.097*(717 - 688) = 84
 ```
-
 Keeping in mind that my model seems to be a bit bullish on Harper's potential and that the threshold for making the playoffs is 95 wins, I am more confident in my intial feelings that investing so much of the team's salary cap on Bryce Harper was not the right move.
 
 ### Conclusion
 
-In Moneyall, 
+Throughout the course of this project, I have been well aware that trying to predict how good a player will be in the future based on less than 10 years of data is very difficult. The beauty of Moneyball, in my opinion, is that the A's were successful because they were able to make a lot of low risk, low commitment gambles. As an insurance underwriter, this concept makes a lot of sense to me. 
+
+My issue with signing Bryce Harper (or any player, for that matter) to an enormous contract is that either a) they're too young to know how good they will be in the short term or b) they've been around too long and are past their prime. By signing Harper for 13 years, he manages to fall into both categories. 
 
 **The Cautionary Tale of Albert Pujols**
 
