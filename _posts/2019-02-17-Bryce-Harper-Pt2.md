@@ -72,7 +72,11 @@ Multiple R-squared:  0.9699,	Adjusted R-squared:  0.9474
 F-statistic:    43 on 3 and 4 DF,  p-value: 0.001679
 ```
 
-This result showed a big improvement from my inital model, but I wanted to run some diagnostic tests to see how usable it was. The first thing I checked for was if there was collinearity between variables
+This result showed a big improvement from my inital model, but I wanted to run some diagnostic tests to see how usable it was. 
+
+### Analysis
+
+The first thing I checked for was if there was collinearity between variables
 
 ```
 cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP)
@@ -91,7 +95,6 @@ ols_plot_resid_qq(lm)
 ```
 ![]({{site.baseurl}}/img/QQ0.png)
 
-Here we see that our Q-Q plot is pretty good.
 ```
 ols_test_normality(lm)
 
@@ -105,14 +108,14 @@ Anderson-Darling          0.1535         0.9278
 -----------------------------------------------
 ```
 
-We can see here that all but Cramer-von Mises test support the null hypothesis that the residuals of the model are normally distributed.
+Here we see that our Q-Q plot is pretty good and that all but Cramer-von Mises test support the null hypothesis that the residuals of the model are normally distributed.
 
 ```
 ols_plot_resid_hist(lm)
 ```
 ![]({{site.baseurl}}/img/ResHistlm0.png)
 
-We can see on this histogram that the mean of the residuals is clearly at 0 but the data might be skewed.
+Additionally, this histogram shows that the mean of the residuals is clearly at 0 but the data might be skewed.
 
 Finally, I calculated the standard deviation and variance of the residuals:
 ```
