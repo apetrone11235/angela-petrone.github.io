@@ -20,7 +20,28 @@ While these two seasons are definitely critical for understanding Harper as an o
 
 ![]({{site.baseurl}}/img/bhHittingStatsgg.png)
 
-This was not a welcome discovery, so I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production. I will spare you the details of all of my exploration, but I want to highlight three models and explain their shortcomings. 
+Statistically, the results of the basic model were unusable
+
+```
+Call:
+lm(formula = R ~ OBP + SLG, data = BryceHarperHitting)
+
+Residuals:
+      1       2       3       4       5       6       7       8 
+ 21.967  -8.841  15.452   2.472 -23.931  -8.209  20.318 -19.227 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)
+(Intercept)   -27.12      90.39  -0.300    0.776
+OBP           -20.87     486.36  -0.043    0.967
+SLG           234.59     248.60   0.944    0.389
+
+Residual standard error: 21.11 on 5 degrees of freedom
+Multiple R-squared:  0.481,	Adjusted R-squared:  0.2734 
+F-statistic: 2.317 on 2 and 5 DF,  p-value: 0.1941
+```
+
+This was not a welcome discovery, so I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production.
 
 **Model 1: OBP + SLG + G**
 
