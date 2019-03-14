@@ -143,8 +143,23 @@ Using 2018 numbers, we get the following prediction for 2019:
 
 ```
 Runs = -52.30 + (-378.78)*0.393 + 343.86*0.496 + 0.83*159
-Runs= 101
+Runs = 101
 ```
 
+This feels very high but not unreasonable given his past production. Baseball-Reference.com has their projection at 90 runs. MLB Fantasy rankings has him getting 94 runs. Let's assume that my model is approximately correct and Harper will produce 101 runs in 2019 and see what this will do for the Phillies. Recalling from part 1 of this post, the Phillies' run production equation I found was: 
+
+```
+RS = -771.67 + 2706.01(OBP) + 1512.56(SLG)
+```
+Also recall that the Phillies needed to make room in their lineup and on the field for Harper. Based on projected lineups for 2019, Harper is expected to hit third, right ahead of Rhys Hoskins and take Nick Williams' place. Williams was making the Major League minimum salary of just over $500,000 and doesn't have a long-term contract in place with the Phillies. According to Baseball-Reference, Williams is projected to produce 56 runs in the 2019 season over 458 plate appearances (compared to Harper who is projected to score 90 runs over 597 plate appearances). Williams' projection is based on the assumption that he will see slightly more action than his last two seasons in the Majors with the Phillies. 
+
+
+### Conclusion
+
+**The Cautionary Tale of Albert Pujols**
+
+When it became clear that Bryce Harper was going to sign a long term contract that wouldn't be up until he was in his mid 30s, my mind went to Albert Pujols. In 2011, he signed a 10 year/$240M contract, which is still one of the [top 10 contracts in MLB history](https://www.si.com/mlb/2019/02/19/manny-machado-largest-contracts-mlb-history). At the time, he was 31 and on the back end of a truly [incredible career](https://www.baseball-reference.com/players/p/pujolal01.shtml). Although Pujols' superstar credentials supported a substantial contract, there was a lot of criticism around the Angels locking him into a contract into his 40s. Since then, it has been clear that Pujols is not the player he was in his prime
+
+![]({{site.baseurl}}/img/PujolsBatting.png)
 
 
