@@ -10,7 +10,7 @@ In order to distract myself from the fact that the Eagles are no longer the reig
 
 To be honest, I am not excited about this. I know Harper is a formidable opponent and not having to play against him would be nice, but I have never been a big fan of him since he came into the MLB as a 19 year old with great hair and a lot of swagger. Compared to Mike Trout, who's about the same age and made his MLB debut the season before Harper, his lack of maturity and humility is notable. All of this is to say, I understand the hype around Harper, but I'm not convinced his stats and attitude make him an optimal addition to the Phillies.
 
-As a 26 year old myself who is still waiting to make her MLB debut, I thought I would try to Moneyball this situation to see if my personal bias against Harper is unwarranted. To do this, I used what I've been learning in my spare time from the helpful folks at [MIT](https://ocw.mit.edu/courses/sloan-school-of-management/15-071-the-analytics-edge-spring-2017/index.htm) to model the Phillies' and Harper's stats to see how he could potentially contribute to the team. I also analyzed the stats of Odubel Herrara (Outfielder, 27 y.o.) who the Phillies are most likely to trade to make room for Harper, should they sign him. Harper and Herrera are both outfielders and typically hit 2nd or 3rd in the batting order.
+As a 26 year old myself who is still waiting to make her MLB debut, I thought I would try to Moneyball this situation to see if my personal bias against Harper is unwarranted. To do this, I used what I've been learning in my spare time from the helpful folks at [MIT](https://ocw.mit.edu/courses/sloan-school-of-management/15-071-the-analytics-edge-spring-2017/index.htm) to model the Phillies' and Harper's stats to see how he could potentially contribute to the team. I also analyzed the stats of Nick Williams (Outfielder, 25 y.o.) who the Phillies are most likely to trade to make room for Harper, should they sign him. Harper and Williams are both outfielders and typically hit 2nd or 3rd in the batting order.
 
 ## Moneyball
 
@@ -22,7 +22,7 @@ A key part of DePodesta's observations was that teams need to win 95 games durin
 
 In Harper's first season in the MLB (2012), he was making the MLB's minimum salary which was $500,000 at the time. While we don’t know how big Harper's contract will be in 2019, we do know that he’s leaving the Nationals after making $21.6M last year, so we can safely assume it will be a massive contract. The latest speculations are $300M over 10 years.
 
-On the other hand, Herrara is signed with the Phillies through 2021 with options through 2023. His current contract is $30MM over 5 years.
+On the other hand, Williams becomes a free agent in 2024 and currently makes the MLB minimum salary of $553,000.
 
 ## Predicting how good the Phillies will be in 2019
 
