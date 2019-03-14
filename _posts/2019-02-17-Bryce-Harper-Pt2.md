@@ -115,7 +115,12 @@ ols_plot_resid_hist(lm)
 ```
 ![]({{site.baseurl}}/img/ResHistlm0.png)
 
-Additionally, this histogram shows that the mean of the residuals is clearly at 0 but the data might be skewed.
+Additionally, this histogram shows that the mean of the residuals is clearly at 0 but the data might be skewed. I tested for this and found that the distribution was approximately symmetric.
+
+```
+skewness(lm$residuals)
+> 0.1321866
+```
 
 Finally, I calculated the standard deviation and variance of the residuals:
 ```
