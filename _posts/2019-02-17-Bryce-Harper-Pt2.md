@@ -74,7 +74,7 @@ F-statistic:    43 on 3 and 4 DF,  p-value: 0.001679
 
 This result showed a big improvement from my inital model, but I wanted to run some diagnostic tests to see how usable it was. 
 
-### Analysis
+#### Analysis
 
 The first thing I checked for was if there was collinearity between variables
 
@@ -129,4 +129,20 @@ var(lm$residuals)
 sd(lm$residuals)
 > 4.29
 ```
+
+#### Prediction
+
+Let's see how many runs this model predicts and how that compares to other predictive resources out there. The equation we have is:
+
+```
+Runs = -52.30 + (-378.78)*OBP + 343.86*SLG + 0.83*G
+```
+Using 2018 numbers, we get the following prediction for 2019:
+
+```
+Runs = -52.30 + (-378.78)*0.393 + 343.86*0.496 + 0.83*159
+Runs= 101
+```
+
+
 
