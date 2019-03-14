@@ -24,7 +24,7 @@ This was not a welcome discovery, so I decided to see what other significant sta
 
 **Model 1: OBP + SLG + G**
 
-First, I thought about what other factors might be able to strenghten the original assumption that OBP and SLG predict runs. When I had graphed Harper's runs over time, it was obvious that the season he got knee surgery he scored the fewest runs on account of the injury and amount of time spent on the bench. 
+First, I thought about what other factors might be able to strenghten the original assumption that OBP and SLG predict runs. When I had graphed Harper's runs over time, it was obvious that the season he got knee surgery he scored the fewest runs on account of the injury and amount of time spent on the bench. Therefore, I added games played to the model:
 
 ```
 lm <- lm(R ~ OBP + SLG + G, data = BryceHarperHitting)
