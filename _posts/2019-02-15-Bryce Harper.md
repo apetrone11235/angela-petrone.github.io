@@ -173,10 +173,9 @@ F-statistic: 80.29 on 2 and 17 DF,  p-value: 2.182e-09
 
 These results looked good to me overall and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml). Making the equations provided by the regression output, we have:
 ```
-Run Scored = -753.88 + 2556.32*OBP + 1591.61*SLG
+Runs Scored = -753.88 + 2556.32*OBP + 1591.61*SLG
 
 Runs Allowed = -796.3 + 2548.7*OOBP + 1652.0*OSLG
-
 ```
 #### Wins
 ```
