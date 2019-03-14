@@ -22,59 +22,44 @@ While these two seasons are definitely critical for understanding Harper as an o
 
 This was not a welcome discovery, so I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production. I will spare you the details of all of my exploration, but I want to highlight three models and explain their shortcomings. 
 
-### Model 1 - Total Bases + RBIs
+**Model 1 - OBP + SLG + G**
 
-Thinking about what variables could be natural predictors for runs scored, I started by looking at total bases (TB) and runs batted in (RBIs). 
-
-![]({{site.baseurl}}/img/bhTBRBIgg.png)
-
-Graphically, this looked pretty good so I went ahead and created the model:
-
-``lm <- lm(R ~ RBI + TB, data = BryceHarperHitting) ``
-
-which produced the following:
+First, I thought about what other factors might be able to strenghten the original assumption that OBP and SLG predict runs. When I had graphed Harper's runs over time, it was obvious that the season he got knee surgery he scored the fewest runs on account of the injury and amount of time spent on the bench. 
 
 ```
+lm <- lm(R ~ OBP + SLG + G, data = BryceHarperHitting)
+summary(lm)
+
 Call:
-lm(formula = R ~ RBI + TB, data = BryceHarperHitting)
+lm(formula = R ~ OBP + SLG + G, data = BryceHarperHitting)
 
 Residuals:
       1       2       3       4       5       6       7       8 
--0.6919  3.4054  1.4362 -6.1972 -5.2911  0.8353  6.6049 -0.1017 
+ 1.5634  6.9580  3.8655 -5.6864 -4.8989 -2.4194 -0.3697  0.9874 
 
 Coefficients:
              Estimate Std. Error t value Pr(>|t|)   
-(Intercept) -20.20948    8.80053  -2.296  0.07009 . 
-RBI           0.36256    0.11532   3.144  0.02555 * 
-TB            0.32104    0.05201   6.173  0.00162 **
+(Intercept)  -52.2981    24.5241  -2.133  0.09992 . 
+OBP         -378.7796   138.2093  -2.741  0.05187 . 
+SLG          343.8607    68.2622   5.037  0.00730 **
+G              0.8304     0.1030   8.065  0.00128 **
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 4.997 on 5 degrees of freedom
-Multiple R-squared:  0.9709,	Adjusted R-squared:  0.9593 
-F-statistic: 83.45 on 2 and 5 DF,  p-value: 0.0001443
+Residual standard error: 5.681 on 4 degrees of freedom
+Multiple R-squared:  0.9699,	Adjusted R-squared:  0.9474 
+F-statistic:    43 on 3 and 4 DF,  p-value: 0.001679
 ```
-Seeing this result, my main concerns were the error term and lack of significance on the intercept, but I wanted to run some diagnostic tests on the model before writing it off. The first thing I checked for was if there was collinearity between variables
+
+Seeing this result, my main concern was the error terms, but I wanted to run some diagnostic tests on the model before writing it off. The first thing I checked for was if there was collinearity between variables
 
 ```
 cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP)
 > 0.003
-```
-```
-cov(BryceHarperHitting$SLG, BryceHarperHitting$TB)
-> 2.98
-```
-```
-cov(BryceHarperHitting$SLG, BryceHarperHitting$RBI)
-> 1.15
-```
-```
-cov(BryceHarperHitting$OBP, BryceHarperHitting$RBI)
-> 0.69
-```
-```
-cov(BryceHarperHitting$OBP, BryceHarperHitting$TB)
-> 1.31
+cov(BryceHarperHitting$SLG, BryceHarperHitting$G)
+> 0.40
+cov(BryceHarperHitting$G, BryceHarperHitting$OBP)
+> 0.30
 ```
 Again, I was not totally happy with these results but I wanted to look at the residuals to have a more comprehensive way to compare potential predictive models. 
 
@@ -83,40 +68,37 @@ Using the olsrr package, I ran the following
 ```
 ols_plot_resid_qq(lm)
 ```
-![]({{site.baseurl}}/img/QQlm.png)
+![]({{site.baseurl}}/img/QQ0.png)
 
-Here we see that our Q-Q plot leaves something to be desired. Not only do we see a siginifant outlier, but there are two other points that fall off the fit line.
+Here we see that our Q-Q plot is pretty good.
 ```
 ols_test_normality(lm)
 
 -----------------------------------------------
        Test             Statistic       pvalue  
 -----------------------------------------------
-Shapiro-Wilk              0.8183         0.0448 
-Kolmogorov-Smirnov        0.2955         0.4085 
-Cramer-von Mises          0.1967         0.2771 
-Anderson-Darling          0.706          0.0390 
+Shapiro-Wilk              0.9711         0.9066 
+Kolmogorov-Smirnov        0.123          0.9981 
+Cramer-von Mises          0.6558         0.0140 
+Anderson-Darling          0.1535         0.9278 
 -----------------------------------------------
 ```
 
-We can see here that the Shapiro-Wilk and Anderson-Darling tests just barely support the null hypothesis while the Kolmogorov-Smirnow and Cramer-von Mises tests do not (i.e. this result does not satisfactorily prove that the residuals of this model are normally distributed).
-```
-ols_test_correlation(lm)
-> 0.99
-```
+We can see here that all but Cramer-von Mises test support the null hypothesis that the residuals of the model are normally distributed. Looking at the 
+
 ```
 ols_plot_resid_hist(lm)
 ```
-![]({{site.baseurl}}/img/ResHistlm.png)
+![]({{site.baseurl}}/img/ResHistlm0.png)
 
 We can see on this histogram that the mean of the residuals is clearly at 0 but the data are skewed.
 
 Finally, I calculated the standard deviation and variance of the residuals:
 ```
-var(lm$residuals)
-> 3.85
-sd(lm$residuals)
-> 1.96
+var(lm0$residuals)
+> 18.44
+sd(lm0$residuals)
+> 4.29
 ```
 
 ### Model 2 - OBP + SLG + PA
