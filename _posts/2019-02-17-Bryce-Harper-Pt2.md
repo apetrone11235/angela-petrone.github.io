@@ -3,7 +3,7 @@ layout: post
 title: Is Bryce Harper a Good Investment for the Phillies? (part 2)
 subtitle: I'm biased so I asked the data
 tags: baseball Sabermetrics
-published: false
+published: true
 ---
 
 ## How good is Bryce Harper?
@@ -171,17 +171,35 @@ cov(BryceHarperHitting$OBP, BryceHarperHitting$PA)
 
 ```
 plot(lm2)
-summary(lm2$residuals) #mean = 0
-var(lm2$residuals) #6.76
-sd(lm2$residuals) # sd = 2.60
-lmtest::bptest(lm2) #p-value > 0.05, df = 3
-car::ncvTest(lm2) #p-value > 0.05, Chisquare = 0.0118
-hist(lm2$residuals)
+summary(lm2$residuals)
+>    Min. 1st Qu.  Median   Mean   3rd Qu.   Max. 
+> -2.9519 -2.3484 -0.2365  0.0000  1.6750  4.0502 
+
+var(lm2$residuals)
+> 6.76
+sd(lm2$residuals)
+> 2.60
+
+lmtest::bptest(lm2)
+> studentized Breusch-Pagan test
+> data:  lm2
+> BP = 2.8282, df = 3, p-value = 0.4189
+
+car::ncvTest(lm2)
+> Non-constant Variance Score Test 
+> Variance formula: ~ fitted.values 
+> Chisquare = 0.01179326, Df = 1, p = 0.91352
+
 ```
 3. Look for normality in the distribution of the residuals (using oslrr package)
 
 ```
 ols_plot_resid_qq(lm2)
+```
+
+![]({{site.baseurl}}/img/QQlm5.png)
+
+```
 ols_test_normality(lm2)
 
 -----------------------------------------------
@@ -196,6 +214,7 @@ Anderson-Darling          0.2668         0.5793
 ```
 ols_test_correlation(lm2)
 > 0.97
+
 ols_plot_resid_hist(lm2)
 ```
 ![]({{site.baseurl}}/img/ResHistlm5.png)
