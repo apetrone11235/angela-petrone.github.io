@@ -159,7 +159,6 @@ As I determined in my first post, I predicted that the Phillies would score 672 
 Original Phillies 2019 Projected Runs = 672
 Harper Runs 2019 - Williams Runs 2019 = 101 - 56 = 45
 New Phillies 2019 Projected Runs = 717
-
 ```
 Now let's see how this will impact their winning potential using the model equation from part 1:
 
