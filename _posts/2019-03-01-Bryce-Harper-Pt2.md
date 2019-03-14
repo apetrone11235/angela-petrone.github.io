@@ -160,6 +160,6 @@ Also recall that the Phillies needed to make room in their lineup and on the fie
 
 When it became clear that Bryce Harper was going to sign a long term contract that wouldn't be up until he was in his mid 30s, my mind went to Albert Pujols. In 2011, he signed a 10 year/$240M contract, which is still one of the [top 10 contracts in MLB history](https://www.si.com/mlb/2019/02/19/manny-machado-largest-contracts-mlb-history). At the time, he was 31 and on the back end of a truly [incredible career](https://www.baseball-reference.com/players/p/pujolal01.shtml). Although Pujols' superstar credentials supported a substantial contract, there was a lot of criticism around the Angels locking him into a contract into his 40s. Since then, it has been clear that Pujols is not the player he was in his prime
 
-![]({{site.baseurl}}/img/PujolsBatting.png)
+![]({{site.baseurl}}/img/APruns.png)
 
 
