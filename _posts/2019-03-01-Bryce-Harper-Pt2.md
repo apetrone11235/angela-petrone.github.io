@@ -137,7 +137,7 @@ sd(lm$residuals)
 Let's see how many runs this model predicts and how that compares to other predictive resources out there. The equation we have is:
 
 ```
-Runs = -52.30 + (-378.78)*OBP + 343.86*SLG + 0.83*G
+Runs = -52.30 + (-378.78)(OBP) + 343.86(SLG) + 0.83(G)
 ```
 Using 2018 numbers, we get the following prediction for 2019:
 
@@ -151,10 +151,27 @@ This feels very high but not unreasonable given his past production. Baseball-Re
 ```
 RS = -771.67 + 2706.01(OBP) + 1512.56(SLG)
 ```
-Also recall that the Phillies needed to make room in their lineup and on the field for Harper. Based on projected lineups for 2019, Harper is expected to hit third, right ahead of Rhys Hoskins and take Nick Williams' place. Williams was making the Major League minimum salary of just over $500,000 and doesn't have a long-term contract in place with the Phillies. According to Baseball-Reference, Williams is projected to produce 56 runs in the 2019 season over 458 plate appearances (compared to Harper who is projected to score 90 runs over 597 plate appearances). Williams' projection is based on the assumption that he will see slightly more action than his last two seasons in the Majors with the Phillies. 
+Also recall that the Phillies needed to make room in their lineup and on the field for Harper. Based on projected lineups for 2019, Harper is expected to hit third, right ahead of Rhys Hoskins and take Nick Williams' place. Williams was making the Major League minimum salary of just over $500,000 and doesn't have a long-term contract in place with the Phillies. According to Baseball-Reference, Williams is projected to produce 56 runs in the 2019 season over 458 plate appearances (compared to Harper who is projected to score 90 runs over 597 plate appearances). Williams' projection is based on the assumption that he will see slightly more action than his last two seasons in the Majors with the Phillies. Although we know this is not the case, it does make it easier to predict how removing Williams and adding Harper will change the Phillies' winning potential. 
 
+As I determined in my first post, I predicted that the Phillies would score 672 runs if they kept their general lineup the same as in 2018. While Harper isn't the only change to the Phillies' roster, he is by far the most signifcant and the only player likely to have a real impact on the Phillies' season. For that reason, I am holding everything else equal and only changing Williams' and Harpers' stats.
+
+```
+Original Phillies 2019 Projected Runs = 672
+Harper Runs 2019 - Williams Runs 2019 = 101 - 56 = 45
+New Phillies 2019 Projected Runs = 717
+
+```
+Now let's see how this will impact their winning potential using the model equation from part 1:
+
+```
+Wins = 81.36 + 0.097*(717 - 688) = 84
+```
+
+Keeping in mind that my model seems to be a bit bullish on Harper's potential and that the threshold for making the playoffs is 95 wins, I am more confident in my intial feelings that investing so much of the team's salary cap on Bryce Harper was not the right move.
 
 ### Conclusion
+
+In Moneyall, 
 
 **The Cautionary Tale of Albert Pujols**
 
