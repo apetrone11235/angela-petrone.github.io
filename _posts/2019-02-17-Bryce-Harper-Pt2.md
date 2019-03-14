@@ -43,7 +43,7 @@ F-statistic: 2.317 on 2 and 5 DF,  p-value: 0.1941
 
 This was not a welcome discovery, so I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production.
 
-**Model 1: OBP + SLG + G**
+**Model 2: OBP + SLG + G**
 
 First, I thought about what other factors might be able to strenghten the original assumption that OBP and SLG predict runs. When I had graphed Harper's runs over time, it was obvious that the season he got knee surgery he scored the fewest runs on account of the injury and amount of time spent on the bench. Therefore, I added games played to the model:
 
@@ -72,7 +72,7 @@ Multiple R-squared:  0.9699,	Adjusted R-squared:  0.9474
 F-statistic:    43 on 3 and 4 DF,  p-value: 0.001679
 ```
 
-Seeing this result, my main concern was the error terms, but I wanted to run some diagnostic tests on the model before writing it off. The first thing I checked for was if there was collinearity between variables
+This result showed a big improvement from my inital model, but I wanted to run some diagnostic tests to see how usable it was. The first thing I checked for was if there was collinearity between variables
 
 ```
 cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP)
@@ -82,7 +82,7 @@ cov(BryceHarperHitting$SLG, BryceHarperHitting$G)
 cov(BryceHarperHitting$G, BryceHarperHitting$OBP)
 > 0.30
 ```
-Again, I was not totally happy with these results but I wanted to look at the residuals to have a more comprehensive way to compare potential predictive models. 
+I was not totally happy with these results but I wanted to look at the residuals to have a more comprehensive way to compare potential predictive models. 
 
 Using the olsrr package, I ran the following 
 
@@ -105,14 +105,14 @@ Anderson-Darling          0.1535         0.9278
 -----------------------------------------------
 ```
 
-We can see here that all but Cramer-von Mises test support the null hypothesis that the residuals of the model are normally distributed. Looking at the 
+We can see here that all but Cramer-von Mises test support the null hypothesis that the residuals of the model are normally distributed.
 
 ```
 ols_plot_resid_hist(lm)
 ```
 ![]({{site.baseurl}}/img/ResHistlm0.png)
 
-We can see on this histogram that the mean of the residuals is clearly at 0 but the data are skewed.
+We can see on this histogram that the mean of the residuals is clearly at 0 but the data might be skewed.
 
 Finally, I calculated the standard deviation and variance of the residuals:
 ```
@@ -122,102 +122,3 @@ sd(lm$residuals)
 > 4.29
 ```
 
-### Model 2: OBP + SLG + PA
-
-Finding my first model unsatisfactory, I tried to think about other variables that could strengthen the original model. As I discussed in the first part of this post, plate appearances (PA) are the number of times a player steps to the plate, regardless of the outcome. I figured that knowing how ofter a player has a chance to hit would probably be indicative of how much they actually hit. This is a standard strategy in baseball evidenced by managers putting their best hitters early in the lineup to get them more PAs.
-
-Graphically, Harper's stats look like this:
-
-![]({{site.baseurl}}/img/PAbh5.png)
-
-From here, I built my model
-```
-lm2 <- lm(R ~ OBP + SLG + PA, data = BryceHarperHitting)
-summary(lm2)
-
-Call:
-lm(formula = R ~ OBP + SLG + PA, data = BryceHarperHitting)
-
-Residuals:
-       1        2        3        4        5        6        7        8 
--0.55857  4.05017  2.94722 -2.95191 -2.53824 -2.28508  0.08549  1.25092 
-
-Coefficients:
-              Estimate Std. Error t value Pr(>|t|)    
-(Intercept)  -42.46744   14.77506  -2.874 0.045274 *  
-OBP         -336.89958   82.61986  -4.078 0.015127 *  
-SLG          309.39699   40.89223   7.566 0.001636 ** 
-PA             0.17981    0.01325  13.573 0.000171 ***
----
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-
-Residual standard error: 3.441 on 4 degrees of freedom
-Multiple R-squared:  0.989,	Adjusted R-squared:  0.9807 
-F-statistic: 119.5 on 3 and 4 DF,  p-value: 0.0002273
-```
-
-Since adding PAs to the original model clearly helped, I moved onto running diagnostic tests:
-
-1. Check for collinearity
-
-```
-cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP)
-> 0.003
-cov(BryceHarperHitting$SLG, BryceHarperHitting$PA)
-> 2.33
-cov(BryceHarperHitting$OBP, BryceHarperHitting$PA)
-> 1.55
-```
-
-
-2. Check for heterskedacity
-
-```
-plot(lm2)
-summary(lm2$residuals)
->    Min. 1st Qu.  Median   Mean   3rd Qu.   Max. 
-> -2.9519 -2.3484 -0.2365  0.0000  1.6750  4.0502 
-
-var(lm2$residuals)
-> 6.76
-sd(lm2$residuals)
-> 2.60
-
-lmtest::bptest(lm2)
-> studentized Breusch-Pagan test
-> data:  lm2
-> BP = 2.8282, df = 3, p-value = 0.4189
-
-car::ncvTest(lm2)
-> Non-constant Variance Score Test 
-> Variance formula: ~ fitted.values 
-> Chisquare = 0.01179326, Df = 1, p = 0.91352
-
-```
-3. Look for normality in the distribution of the residuals (using oslrr package)
-
-```
-ols_plot_resid_qq(lm2)
-```
-
-![]({{site.baseurl}}/img/QQlm5.png)
-
-```
-ols_test_normality(lm2)
-
------------------------------------------------
-       Test             Statistic       pvalue  
------------------------------------------------
-Shapiro-Wilk              0.9275         0.4940 
-Kolmogorov-Smirnov        0.1852         0.9032 
-Cramer-von Mises          0.7028         0.0104 
-Anderson-Darling          0.2668         0.5793 
------------------------------------------------
-```
-```
-ols_test_correlation(lm2)
-> 0.97
-
-ols_plot_resid_hist(lm2)
-```
-![]({{site.baseurl}}/img/ResHistlm5.png)
