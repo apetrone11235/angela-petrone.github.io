@@ -130,6 +130,8 @@ sd(lm$residuals)
 > 4.29
 ```
 
+
+
 #### Prediction
 
 Let's see how many runs this model predicts and how that compares to other predictive resources out there. The equation we have is:
