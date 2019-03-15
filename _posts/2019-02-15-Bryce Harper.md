@@ -206,7 +206,6 @@ F-statistic: 80.29 on 2 and 17 DF,  p-value: 2.182e-09
 cov(Phillies$OSLG, Phillies$OOBP)
 > 0.00
 ```
-
 ![]({{site.baseurl}}/img/HeteroRunsAllowed.png)
 
 ```
@@ -230,7 +229,9 @@ ols_plot_resid_hist(RunsAllowed)
 ```
 ![]({{site.baseurl}}/img/ResHistRunsAllowed.png)
 
-These results looked good to me overall and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml). Making the equations provided by the regression output, we have:
+These results were not surprisingly weaker than our Runs Scored model because we have less data; however taking into account the significance of the model and the diagnostic results, I felt reasonably confident about using it.
+
+Making the equations provided by the regression output, we have:
 ```
 Runs Scored = -753.88 + 2556.32*OBP + 1591.61*SLG
 
