@@ -137,7 +137,7 @@ sd(lm$residuals)
 Let's see how many runs this model predicts and how that compares to other predictive resources out there. The equation we have is:
 
 ```
-Runs = -52.30 + (-378.78)(OBP) + 343.86(SLG) + 0.83(G)
+Runs = -52.30 + (-378.78)*OBP + 343.86*SLG + 0.83*G
 ```
 Using 2018 numbers, we get the following prediction for 2019:
 
@@ -153,7 +153,7 @@ If we reevaluate the equation with 140 games rather than 159 like last season, o
 To give Harper the best shot at impressing me with his potential contribution to the Phillies, let's assume that my model is approximately correct and Harper will produce 101 runs and play nearly every game in 2019. Recalling from Part 1 of this post, the Phillies' run production equation was: 
 
 ```
-RS = -771.67 + 2706.01(OBP) + 1512.56(SLG)
+RS = -771.67 + 2706.01*OBP + 1512.56*SLG
 ```
 Also recall that the Phillies needed to make room in their lineup and on the field for Harper. Based on recently projected lineups for 2019, Harper is expected to hit third, right ahead of Rhys Hoskins and take Nick Williams'place as I expected. [According to Baseball-Reference](https://www.baseball-reference.com/players/w/willini01.shtml), Williams is projected to produce 56 runs in the 2019 season over 458 plate appearances (compared to Harper who they project will score 90 runs over 597 plate appearances). Williams' projection is based on the assumption that he will see slightly more action than his last two seasons in the Majors with the Phillies. Although we know this will not be the case as long as Harper stays healthy, it does make it easier to predict how removing Williams and adding Harper will change the Phillies' winning potential. 
 
