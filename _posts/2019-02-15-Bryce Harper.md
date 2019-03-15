@@ -144,6 +144,29 @@ Multiple R-squared:  0.9182,	Adjusted R-squared:  0.9144
 F-statistic: 241.4 on 2 and 43 DF,  p-value: < 2.2e-16
 ```
 
+**Testing the Model**
+
+```
+cov(Phillies$SLG, Phillies$OBP)
+> 0.00
+```
+```
+summary(RunsScored$residuals) #mean = 0
+   Min.  1st Qu.  Median   Mean   3rd Qu.  Max. 
+ -74.37  -11.52    3.49    0.00   12.83   55.59 
+```
+```
+ols_plot_resid_qq(RunsScored)
+```
+![]({{site.baseurl}}/img/QQRunsScored.png)
+
+```
+ols_test_correlation(RunsScored)
+> 0.96
+ols_plot_resid_hist(RunsScored)
+```
+![]({{site.baseurl}}/img/ResHistRunsScored.png)
+
 #### Runs Allowed
 
 ```
