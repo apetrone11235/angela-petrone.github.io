@@ -169,13 +169,14 @@ Now let's see how this will impact their winning potential using the model equat
 ```
 Wins = 81.36 + 0.097*(717 - 688) = 84
 ```
-Keeping in mind that my model seems to be a bit bullish on Harper's potential and that the threshold for making the playoffs is 95 wins, I am more confident in my intial feelings that investing so much of the team's salary cap on Bryce Harper was not the right move. To be fair, the results of this model suggest that Harper can single-handedly add four wins to the Phillies' season which is impressive. 
+Keeping in mind that my model seems to be a bit bullish on Harper's potential and that the threshold for making the playoffs is 95 wins, I am more confident in my intial feelings that investing so much of the team's salary cap on Bryce Harper was not the right move. To be fair, the results of this model suggest that Harper can single-handedly add four wins to the Phillies' season which is impressive. But I don't think it's enough because adding Harper doesn't address the other half of equation (lowering runs allowed) the way improving pitching would.
 
 ### Conclusion
 
 Throughout the course of this project, I have been acutely aware that trying to predict how good a player will be in the future based on less than 10 years of data is very difficult. The beauty of Moneyball, in my opinion, is that the A's were successful because they were able to make a lot of low risk, low commitment gambles and specifically avoided risking a lot of money on blockbuster players. As an insurance underwriter, this concept makes a lot of sense to me.
 
-My issue with signing players to enormous contracts is that either a) they're too young to know how good they will be in the short term or b) they've been around too long and are past their prime. By signing Harper for 13 years, he manages to fall into both categories. 
+My issue with signing players to enormous contracts is that either a) they're too young to know how good they will be in the short term or b) they've been around too long and are past their prime. By signing Harper for 13 years, he manages to fall into both categories.
+
 
 **The Cautionary Tale of Albert Pujols**
 
@@ -183,4 +184,10 @@ When it became clear that Bryce Harper was going to sign a long term contract th
 
 ![]({{site.baseurl}}/img/APruns.png)
 
+I know that Harper is not Pujols. If any comparison is to be made, Pujols has had a more impressive career considering the number of times he has been an MVP, and All Star, and won both the Silver Slugger and [Golden Glove] (https://en.wikipedia.org/wiki/Rawlings_Gold_Glove_Award) Awards. To be fair, Pujols came into the Majors towards the end of the [Steroids Era](http://www.espn.com/mlb/topics/_/page/the-steroids-era). He was never suspended for steroid use, but my point is that the game was different.
 
+Regardless, the post-2010 nosedive that Pujols' run production took paints a concerning picture of the longterm prospects of even one the best players of all time. Whether the deterioration in run production is a function of age or the decreased motivation that comes with incredible job security, sustaining numbers that warrant a $22M to $30M salary for 13 years is not feasible.
+
+**How Bryce Harper Get His 10,000 Steps a Day**
+
+One last statistic I would like to mention is how much Bryce Harper walks. 
