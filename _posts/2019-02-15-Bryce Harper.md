@@ -260,7 +260,7 @@ F-statistic: 324.9 on 1 and 44 DF,  p-value: < 2.2e-16
 ```
 **Testing the Model**
 
-![]({{site.baseurl}}/img/Wins.png)
+![]({{site.baseurl}}/img/HeteroWins.png)
 
 ```
 summary(Wins$residuals) 
