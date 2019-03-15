@@ -10,17 +10,17 @@ published: true
 
 My main objective in evaluating Bryce Harper's value to the Phillies was determining how good he is offensively, especially with regards to run production. I was much less concerned with his defensive ability because, as an outfielder, he is unlikely to change the score of a given game on the field. Of course, a truly terrible outfielder who misses routine fly balls and can't make a decent through to the plate will cost their team some runs, but considering Harper is not a liability in the outfield, I chose to focus on his hitting.
 
-As I outlined in part 1 of this project, the key offensive stats I looked at were Runs, OBP, and SLG. Considering Harper has been in the league for only 8 years, I wanted to get a sense of his average run production before trying to make any assumptions about his future production. 
+As I outlined in Part 1 of this project, the key offensive stats I looked at were run production, OBP, and SLG. Considering Harper has been in the league for only 7 years plus one year in the Minor League, I wanted to get a sense of his average run production before trying to make any assumptions about his future production. 
 
 ![]({{site.baseurl}}/img/bhRunsggplot.png)
 
-The first thing I noticed about this graph was the inconsistency in production over not that many years. In 2014 when he was just 22, Harper only played 100 games due to a knee injury that required surgery. It seems like the surgery was not just successful but also gave him either a lot of motivation to perform in 2015 or hitting super powers, because in 2015 he came back to lead the league in runs and HRs, lead the entire MLB in OBP and SLG, was an All Star, the NL MVP, and won the NL [Silver Slugger Award](https://en.wikipedia.org/wiki/Silver_Slugger_Award).
+The first thing I noticed about this graph was his inconsistency in production. In 2014 when he was just 22, Harper only played 100 games due to a knee injury that required surgery. It seems like the surgery was not just successful but also gave him either a lot of motivation to perform in 2015 or hitting super powers, because in 2015 he came back to lead the league in runs and HRs, lead the entire MLB in OBP and SLG, make the All Star team, win the NL [MVP award](https://en.wikipedia.org/wiki/Major_League_Baseball_Most_Valuable_Player_Award), and win the NL [Silver Slugger Award](https://en.wikipedia.org/wiki/Silver_Slugger_Award).
 
 While these two seasons are definitely critical for understanding Harper as an offensive player, they make his stats pretty challenging to predict. For example, when I took a look at the relationship between runs scored, OBP and SLG, I got this:
 
 ![]({{site.baseurl}}/img/bhHittingStatsgg.png)
 
-Statistically, the results of the basic model were unusable
+Statistically, the results of the Moneyball model were unusable
 
 ```
 Call:
@@ -41,11 +41,11 @@ Multiple R-squared:  0.481,	Adjusted R-squared:  0.2734
 F-statistic: 2.317 on 2 and 5 DF,  p-value: 0.1941
 ```
 
-This was not a welcome discovery, so I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production.
+This was not a welcome discovery but my determination to find out if Harper is actually overrated helped me to persevere. I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production. I will spare you the details and simply leave you with what I found to be the most successful model I could find.
 
 **Model 2: OBP + SLG + G**
 
-First, I thought about what other factors might be able to strenghten the original assumption that OBP and SLG predict runs. When I had graphed Harper's runs over time, it was obvious that the season he got knee surgery he scored the fewest runs on account of the injury and amount of time spent on the bench. Therefore, I added games played to the model:
+When I had graphed Harper's runs over time, it was obvious that the season he got knee surgery he scored the fewest runs on account of the injury and amount of time spent on the bench. Therefore, I added games played to the model:
 
 ```
 lm <- lm(R ~ OBP + SLG + G, data = BryceHarperHitting)
@@ -86,9 +86,9 @@ cov(BryceHarperHitting$SLG, BryceHarperHitting$G)
 cov(BryceHarperHitting$G, BryceHarperHitting$OBP)
 > 0.30
 ```
-I was not totally happy with these results but I wanted to look at the residuals to have a more comprehensive way to compare potential predictive models. 
+I was not totally happy with these results due to the slight positive relationship between the variables, but I decided to look at the residuals to get a more comprehensive understanding of my model. 
 
-Using the olsrr package, I ran the following 
+Using the olsrr package, I ran the following:
 
 ```
 ols_plot_resid_qq(lm)
@@ -146,12 +146,16 @@ Runs = -52.30 + (-378.78)*0.393 + 343.86*0.496 + 0.83*159
 Runs = 101
 ```
 
-This feels very high but not unreasonable given his past production. Baseball-Reference.com has their projection at 90 runs. MLB Fantasy rankings has him getting 94 runs. Let's assume that my model is approximately correct and Harper will produce 101 runs in 2019 and see what this will do for the Phillies. Recalling from part 1 of this post, the Phillies' run production equation I found was: 
+This feels very high but not unreasonable given his past production when he plays nearly all of the games in a season. Baseball-Reference has [their projection](https://www.baseball-reference.com/players/h/harpebr03.shtml) at 90 runs. Based on Harper's projected PAs, it seems that Baseball-Reference is assuming he will play about 140 games which is about his career average. Similarly, [MLB Fantasy Rankings](https://www.mlb.com/news/fantasy-baseball-rankings-2019-player-preview-c295284374) has him producing 94 runs.
+
+If we reevaluate the equation with 140 games rather than 159 like last season, our new run projection is 86 which is very close to his MLB career average of 87 runs per season.
+
+To give Harper the best shot at impressing me with his potential contribution to the Phillies, let's assume that my model is approximately correct and Harper will produce 101 runs and play nearly every game in 2019. Recalling from Part 1 of this post, the Phillies' run production equation was: 
 
 ```
 RS = -771.67 + 2706.01(OBP) + 1512.56(SLG)
 ```
-Also recall that the Phillies needed to make room in their lineup and on the field for Harper. Based on projected lineups for 2019, Harper is expected to hit third, right ahead of Rhys Hoskins and take Nick Williams' place. Williams was making the Major League minimum salary of just over $500,000 and doesn't have a long-term contract in place with the Phillies. According to Baseball-Reference, Williams is projected to produce 56 runs in the 2019 season over 458 plate appearances (compared to Harper who is projected to score 90 runs over 597 plate appearances). Williams' projection is based on the assumption that he will see slightly more action than his last two seasons in the Majors with the Phillies. Although we know this is not the case, it does make it easier to predict how removing Williams and adding Harper will change the Phillies' winning potential. 
+Also recall that the Phillies needed to make room in their lineup and on the field for Harper. Based on recently projected lineups for 2019, Harper is expected to hit third, right ahead of Rhys Hoskins and take Nick Williams'place as I expected. [According to Baseball-Reference](https://www.baseball-reference.com/players/w/willini01.shtml), Williams is projected to produce 56 runs in the 2019 season over 458 plate appearances (compared to Harper who they project will score 90 runs over 597 plate appearances). Williams' projection is based on the assumption that he will see slightly more action than his last two seasons in the Majors with the Phillies. Although we know this will not be the case as long as Harper stays healthy, it does make it easier to predict how removing Williams and adding Harper will change the Phillies' winning potential. 
 
 As I determined in my first post, I predicted that the Phillies would score 672 runs if they kept their general lineup the same as in 2018. While Harper isn't the only change to the Phillies' roster, he is by far the most signifcant and the only player likely to have a real impact on the Phillies' season. For that reason, I am holding everything else equal and only changing Williams' and Harpers' stats.
 
@@ -160,18 +164,18 @@ Original Phillies 2019 Projected Runs = 672
 Harper Runs 2019 - Williams Runs 2019 = 101 - 56 = 45
 New Phillies 2019 Projected Runs = 717
 ```
-Now let's see how this will impact their winning potential using the model equation from part 1:
+Now let's see how this will impact their winning potential using the model equation from Part 1:
 
 ```
 Wins = 81.36 + 0.097*(717 - 688) = 84
 ```
-Keeping in mind that my model seems to be a bit bullish on Harper's potential and that the threshold for making the playoffs is 95 wins, I am more confident in my intial feelings that investing so much of the team's salary cap on Bryce Harper was not the right move.
+Keeping in mind that my model seems to be a bit bullish on Harper's potential and that the threshold for making the playoffs is 95 wins, I am more confident in my intial feelings that investing so much of the team's salary cap on Bryce Harper was not the right move. To be fair, the results of this model suggest that Harper can single-handedly add four wins to the Phillies' season which is impressive. 
 
 ### Conclusion
 
-Throughout the course of this project, I have been well aware that trying to predict how good a player will be in the future based on less than 10 years of data is very difficult. The beauty of Moneyball, in my opinion, is that the A's were successful because they were able to make a lot of low risk, low commitment gambles. As an insurance underwriter, this concept makes a lot of sense to me. 
+Throughout the course of this project, I have been acutely aware that trying to predict how good a player will be in the future based on less than 10 years of data is very difficult. The beauty of Moneyball, in my opinion, is that the A's were successful because they were able to make a lot of low risk, low commitment gambles and specifically avoided risking a lot of money on blockbuster players. As an insurance underwriter, this concept makes a lot of sense to me.
 
-My issue with signing Bryce Harper (or any player, for that matter) to an enormous contract is that either a) they're too young to know how good they will be in the short term or b) they've been around too long and are past their prime. By signing Harper for 13 years, he manages to fall into both categories. 
+My issue with signing players to enormous contracts is that either a) they're too young to know how good they will be in the short term or b) they've been around too long and are past their prime. By signing Harper for 13 years, he manages to fall into both categories. 
 
 **The Cautionary Tale of Albert Pujols**
 
