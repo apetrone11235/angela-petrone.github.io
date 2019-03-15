@@ -188,7 +188,7 @@ When it became clear that Bryce Harper was going to sign a long term contract th
 
 ![]({{site.baseurl}}/img/APruns.png)
 
-I know that Harper is not Pujols. If any comparison is to be made, Pujols has had a more impressive career considering the number of times he has been an MVP, and All Star, and won both the Silver Slugger and [Golden Glove] (https://en.wikipedia.org/wiki/Rawlings_Gold_Glove_Award) Awards. To be fair, Pujols came into the Majors towards the end of the [Steroids Era](http://www.espn.com/mlb/topics/_/page/the-steroids-era). He was never suspended for steroid use, but my point is that the game was different.
+I know that Harper is not Pujols. If any comparison is to be made, Pujols has had a more impressive career considering the number of times he has been an MVP, and All Star, and won both the Silver Slugger and [Golden Glove](https://en.wikipedia.org/wiki/Rawlings_Gold_Glove_Award) Awards. To be fair, Pujols came into the Majors towards the end of the [Steroids Era](http://www.espn.com/mlb/topics/_/page/the-steroids-era). He was never suspended for steroid use, but my point is that the game was different.
 
 Regardless, the post-2010 nosedive that Pujols' run production took paints a concerning picture of the longterm prospects of even one the best players of all time. Whether the deterioration in run production is a function of age or the decreased motivation that comes with incredible job security, sustaining numbers that warrant a $22M to $30M salary for 13 years is not feasible.
 
