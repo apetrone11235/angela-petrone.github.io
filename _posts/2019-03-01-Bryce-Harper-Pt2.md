@@ -115,9 +115,13 @@ ols_plot_resid_hist(lm)
 ```
 ![]({{site.baseurl}}/img/ResHistlm0.png)
 
-Additionally, this histogram shows that the mean of the residuals is clearly at 0 but the data might be skewed. I tested for this and found that the distribution was approximately symmetric.
+Additionally, this histogram shows that the mean of the residuals is clearly at 0 but the data might be skewed. I checked the summary and tested for this and found that the distribution was approximately symmetric.
 
 ```
+summary(lm6$residuals)
+   Min.  1st Qu.  Median  Mean   3rd Qu.  Max. 
+-5.6864 -3.0392  0.3089  0.0000  2.1389  6.9580 
+
 skewness(lm$residuals)
 > 0.1321866
 ```
