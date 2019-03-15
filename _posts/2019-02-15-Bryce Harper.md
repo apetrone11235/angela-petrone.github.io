@@ -200,6 +200,35 @@ Residual standard error: 24.97 on 17 degrees of freedom
 Multiple R-squared:  0.9043,	Adjusted R-squared:  0.893 
 F-statistic: 80.29 on 2 and 17 DF,  p-value: 2.182e-09
 ```
+**Testing the Model**
+
+```
+cov(Phillies$OSLG, Phillies$OOBP)
+> 0.00
+```
+
+![]({{site.baseurl}}/img/HeteroRunsAllowed.png)
+
+```
+summary(RunsAllowed$residuals) 
+   Min.    1st Qu.   Median   Mean    3rd Qu.   Max. 
+-39.5665 -17.6630  -0.7857   0.0000  20.0378  46.5223 
+```
+```
+skewness(RunsAllowed$residuals)
+> -0.01
+```
+```
+ols_plot_resid_qq(RunsAllowed)
+```
+![]({{site.baseurl}}/img/QQRunsAllowed.png)
+
+```
+ols_test_correlation(RunsAllowed)
+> 0.99
+ols_plot_resid_hist(RunsAllowed)
+```
+![]({{site.baseurl}}/img/ResHistRunsAllowed.png)
 
 These results looked good to me overall and aligned with the projections on [Baseball-Reference.com](https://www.baseball-reference.com/teams/PHI/2018.shtml). Making the equations provided by the regression output, we have:
 ```
