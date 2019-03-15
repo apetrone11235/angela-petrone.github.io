@@ -6,11 +6,11 @@ tags: baseball Sabermetrics
 published: true
 ---
 
-In order to distract myself from the fact that the Eagles are no longer the reigning Super Bowl Champs, I have been listening to Phillies trade rumors. The biggest story from this beat is without a doubt the potential for us to pick up Bryce Harper (Outfielder, 26 y.o.) from our National League East rival the Nationals. 
+In order to distract myself from the fact that the Eagles are no longer the reigning Super Bowl Champs, I have been listening to Phillies trade rumors. The biggest story from this beat is without a doubt the potential for us to pick up Bryce Harper (Outfielder, 26 y.o.) from our National League East rival the Washington Nationals. 
 
 To be honest, I am not excited about this. I know Harper is a formidable opponent and not having to play against him would be nice, but I have never been a big fan of him since he came into the MLB as a 19 year old with great hair and a lot of swagger. Compared to Mike Trout, who's about the same age and made his MLB debut the season before Harper, his lack of maturity and humility is notable. All of this is to say, I understand the hype around Harper, but I'm not convinced his stats and attitude make him an optimal addition to the Phillies.
 
-As a 26 year old myself who is still waiting to make her MLB debut, I thought I would try to Moneyball this situation to see if my personal bias against Harper is unwarranted. To do this, I used what I've been learning in my spare time from the helpful folks at [MIT](https://ocw.mit.edu/courses/sloan-school-of-management/15-071-the-analytics-edge-spring-2017/index.htm) to model the Phillies' and Harper's stats to see how he could potentially contribute to the team. I also analyzed the stats of Nick Williams (Outfielder, 25 y.o.) who the Phillies are most likely to trade to make room for Harper, should they sign him. Harper and Williams are both outfielders and typically hit 2nd or 3rd in the batting order.
+As a 26 year old myself who is still waiting to make her MLB debut, I thought I would try to Moneyball this situation to see if my personal bias against Harper is unwarranted. To do this, I used what I've been learning in my spare time from the helpful folks at [MIT](https://ocw.mit.edu/courses/sloan-school-of-management/15-071-the-analytics-edge-spring-2017/index.htm) to model the Phillies' and Harper's stats to see how he could potentially contribute to the team. I also analyzed the stats of Nick Williams (Outfielder, 25 y.o.) who the Phillies are most likely to bench to make room for Harper, should they sign him. Harper and Williams are both outfielders and typically hit 2nd or 3rd in the batting order.
 
 ## Moneyball
 
@@ -20,27 +20,25 @@ A key part of DePodesta's observations was that teams need to win 95 games durin
 
 **The "money" part of Moneyball**
 
-In Harper's first season in the MLB (2012), he was making the MLB's minimum salary which was $500,000 at the time. While we don’t know how big Harper's contract will be in 2019, we do know that he’s leaving the Nationals after making $21.6M last year, so we can safely assume it will be a massive contract. The latest speculations are $300M over 10 years.
+In Harper's first season in the MLB (2012), he was making the MLB's minimum salary which was $500,000 at the time. While we don’t know how big Harper's contract will be in 2019, we do know that he’s leaving the Nationals after making $21.6M last year, so we can safely assume it will be a massive contract. The latest speculations indicate it will be around $300M over 10 years.
 
-On the other hand, Williams becomes a free agent in 2024 and currently makes the MLB minimum salary of $553,000.
+On the other hand, Williams becomes a free agent in 2024 and makes the current MLB minimum salary of $553,000.
 
 ## Predicting how good the Phillies will be in 2019
 
-The first thing I wanted to know was how the Phillies are expected to do assuming they don't make any big changes. To do to this, I used the same premise that DePodesta applied: figure out how many runs a team will score vs. how many runs they will allow their opponents to score in a given season and use this to determine wins. As I said before, DePodesta believed that certain stats were better predictors of a player's success than others. For example, traditional scouting puts a lot of emphasis on a player's batting average (BA = number of hits/number of at bats). While it is useful to know how often a player gets a hit, using at bats (AB) rather than plate appearances (PA) is a little misleading if our ultimate goal is to know how many runs a player can generate. For example, a sacrifice fly that causes a runner to score would not count as a hit or an at bat. The same goes for a walk with the bases loaded that forces a run to score. Both of these instances would count as PAs but not ABs.
+The first thing I wanted to know was how the Phillies are expected to do assuming they don't make any big changes to their roster. To do to this, I used the same premise that DePodesta applied: figure out how many runs the Phillies will score vs. how many runs they will allow their opponents to score through the course of a season and use this to determine how many games they will win. As I have already mentioned, DePodesta believed that certain stats were better predictors of a player's success than others. For example, traditional scouting puts a lot of emphasis on a player's batting average (BA = number of hits/number of at bats). While it is useful to know how often a player gets a hit, using at bats (AB) rather than plate appearances (PA) is a little misleading if our ultimate goal is to know how many runs a player can generate. For example, a sacrifice fly that causes a runner to score would not count as a hit or an at bat. The same goes for a walk with the bases loaded that forces a run to score. Both of these instances would count as PAs but not ABs even though the player generated a run.
 
 Fortunately, we have a lot of options when it comes to baseball statistics and as DePodesta found, a player's on-base percentage (OBP) and slugging percentage (SLG) are highly predictive of how many runs they score throughout the course of a season.
 
 ![]({{site.baseurl}}/img/OBPformula.png){:height="50%" width="50%"}
 
-As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Similarly, a team's opponent's OBP (OOBP) and SLG (OSLG) are indicative of how many runs a team will allow against a given opponent.
+As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Similarly, a team's opponent's OBP (OOBP) and SLG (OSLG) are indicative of how many runs a team will allow their opponents to score.
 
-Using the Phillies' numbers from the last 49 years, I created the following dataframe, using the original baseball dataset from MIT's *Analytics Edge* course (sourced from [Baseball-Reference.com](https://www.baseball-reference.com)), adding a variable for run difference (RD = runs scored - runs allowed) and removing excess variables I didn't need: 
+I wanted to use the Phillies' numbers from the last 49 years because the NL East was officially formed in 1969. I created the following dataframe, using the original baseball dataset from MIT's *Analytics Edge* course (sourced from [Baseball-Reference.com](https://www.baseball-reference.com)), adding a variable for run difference (RD = runs scored - runs allowed) and removing variables I didn't need: 
 
 ```
 baseball = read.csv("baseball.csv") #only goes to 2012
 Phillies = subset(baseball, Team == "PHI" & Year > 1968)
-
-#NL East officially formed in 1969
 
 Phillies$RD = Phillies$RS - Phillies$RA
 Phillies$Team = NULL
@@ -84,7 +82,7 @@ summary(Phillies)
  NA's   :26  
  ```
 
-This generally looks good, with the exception of OOBP and OSLG where we have 26 NA's in each! Isolating these variables, it is clear that these stats were not collected by Baseball-Reference until 1992. This is unfortunate but not catastrophic considering 1999 was somehow 20 years ago.
+This generally looks good, with the exception of OOBP and OSLG where we have 26 NA's in each. Isolating these variables, it is clear that these stats were not collected by Baseball-Reference until 1992. This is unfortunate but not catastrophic considering 1999 was somehow 20 years ago.
 
 ```
 table(Phillies$OOBP > 0, Phillies$Year)
@@ -125,7 +123,7 @@ Using this dataframe, I ran two linear regressions to help me make predictions a
 #### Runs Scored
 
 ```
-RunsScored = lm(RS ~ OBP + SLG, data =Phillies)
+RunsScored = lm(RS ~ OBP + SLG, data = Phillies)
 summary(RunsScored)
 
 
@@ -204,12 +202,13 @@ This gives us the following equation:
 Wins = 81.36 + 0.097*RD
 ```
 
-Just looking at this equation, I thought it intuitively made sense with its intercept at 81, since teams play 162 games per season. To confirm this, I looked at Phillies' wins over time
+Looking at this equation, I thought it intuitively made sense to have its intercept at 81, since teams play 162 games per season. To confirm this, I looked at Phillies' wins over time
 
 ![]({{site.baseurl}}/img/ggplotWins.png)
 
-This graph not only strengthened my confidence in my model, but also highlighted some key years in franchise history, namely our World Series wins in 1980 and 2008, as well as our NL Pennant wins in 1993 and 2009. (Not to mention our horrific 2015 season where we nearly lost 100 games...)
+This graph not only strengthened my confidence in my model, but also highlighted some key years in franchise history, namely our World Series wins in 1980 and 2008, as well as our NL Pennant wins in 1993 and 2009. (Not to mention our horrific 2015 season where we nearly lost 100 games.)
 
-At this point, I felt that I had a good handle on how the Phillies would do in 2019, specifically: RS = 672, RA = 688, RD = -15, W = 80, L = 82
+At this point, I felt that I had a good handle on how the Phillies would do in 2019, specifically: 
+**RS = 672, RA = 688, RD = -15, W = 80, L = 82**
 
-From here, I was able to analyze the impact Bryce Harper could have on the team. Stay tuned for Part 2
+From here, I began to analyze the impact Bryce Harper could have on the team. Stay tuned for Part 2
