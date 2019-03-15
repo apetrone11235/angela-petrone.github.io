@@ -34,7 +34,7 @@ Fortunately, we have a lot of options when it comes to baseball statistics and a
 
 As you can see, these stats tell us much more about a player's ability to get on base and generate runs than their batting average. Similarly, a team's opponent's OBP (OOBP) and SLG (OSLG) are indicative of how many runs a team will allow their opponents to score.
 
-I wanted to use the Phillies' numbers from the last 49 years because the NL East was officially formed in 1969. I created the following dataframe, using the original baseball dataset from MIT's *Analytics Edge* course (sourced from [Baseball-Reference.com](https://www.baseball-reference.com)), adding a variable for run difference (RD = runs scored - runs allowed) and removing variables I didn't need: 
+I wanted to use the Phillies' numbers from the last 49 years because the NL East was officially formed in 1969. I created the following dataframe, using the [original baseball dataset](https://ocw.mit.edu/courses/sloan-school-of-management/15-071-the-analytics-edge-spring-2017/linear-regression/moneyball-the-power-of-sports-analytics/video-1-the-story-of-moneyball/baseball.csv) from MIT's *Analytics Edge* course (sourced from [Baseball-Reference.com](https://www.baseball-reference.com)), adding a variable for run difference (RD = runs scored - runs allowed) and removing variables I didn't need: 
 
 ```
 baseball = read.csv("baseball.csv") #only goes to 2012
