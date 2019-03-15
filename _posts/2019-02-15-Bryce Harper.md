@@ -82,7 +82,7 @@ summary(Phillies)
  NA's   :26  
  ```
 
-This generally looks good, with the exception of OOBP and OSLG where we have 26 NA's in each. Isolating these variables, it is clear that these stats were not collected by Baseball-Reference until 1992. This is unfortunate but not catastrophic considering 1999 was somehow 20 years ago.
+This generally looks good, with the exception of OOBP and OSLG where we have 26 NA's in each. Isolating these variables, it is clear that these stats were not collected by Baseball-Reference until 1992. This is unfortunate but not catastrophic considering 1999 was somehow 20 years ago and R will ignore the NAs when calculating linear regression equations.
 
 ```
 table(Phillies$OOBP > 0, Phillies$Year)
