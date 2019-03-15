@@ -150,10 +150,17 @@ F-statistic: 241.4 on 2 and 43 DF,  p-value: < 2.2e-16
 cov(Phillies$SLG, Phillies$OBP)
 > 0.00
 ```
+
+![]({{site.baseurl}}/img/HeteroRunsScored.png)
+
 ```
-summary(RunsScored$residuals) #mean = 0
+summary(RunsScored$residuals) 
    Min.  1st Qu.  Median   Mean   3rd Qu.  Max. 
  -74.37  -11.52    3.49    0.00   12.83   55.59 
+```
+```
+skewness(RunsScored$residuals)
+> -0.84
 ```
 ```
 ols_plot_resid_qq(RunsScored)
@@ -166,6 +173,8 @@ ols_test_correlation(RunsScored)
 ols_plot_resid_hist(RunsScored)
 ```
 ![]({{site.baseurl}}/img/ResHistRunsScored.png)
+
+We see from these results that the dependent variables are independent, there is minimal heteroscedasticity, and the residuals are normally distributed and not skewed.
 
 #### Runs Allowed
 
