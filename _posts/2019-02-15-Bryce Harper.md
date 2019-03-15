@@ -257,6 +257,33 @@ Residual standard error: 3.815 on 44 degrees of freedom
 Multiple R-squared:  0.8807,	Adjusted R-squared:  0.878 
 F-statistic: 324.9 on 1 and 44 DF,  p-value: < 2.2e-16
 ```
+**Testing the Model**
+
+
+![]({{site.baseurl}}/img/Wins.png)
+
+```
+summary(Wins$residuals) 
+   Min.  1st Qu.  Median  Mean   3rd Qu.   Max. 
+-8.6347 -2.7141  0.3276  0.0000  2.7372  7.7286
+```
+```
+skewness(Wins$residuals)
+> -0.24
+```
+```
+ols_plot_resid_qq(Wins)
+```
+![]({{site.baseurl}}/img/QQWins.png)
+
+```
+ols_test_correlation(Wins)
+> 0.99
+ols_plot_resid_hist(Wins)
+```
+![]({{site.baseurl}}/img/ResHistWins.png)
+
+
 This gives us the following equation:
 
 ```
