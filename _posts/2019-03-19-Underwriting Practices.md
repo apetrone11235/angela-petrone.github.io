@@ -11,7 +11,7 @@ To be fair, the nature of insurance is confusing. Prices are determined using pr
   1) Insurance companies are not ripping you off. In fact, most companies are barely breaking at year end. >>EVIDENCE
   2) There must be ways to improve the underwriting process to help decrease administrative costs and in turn decrease premiums
   
-These observations are clearly related, so I decided to try and find a data-driven solution to a major inefficiency I faced as a [medical malpractice] (https://www.naic.org/cipr_topics/topic_med_mal.htm) underwriter, which was how I tried to identify accounts I wanted to underwrite. 
+These observations are clearly related, so I decided to try and find a data-driven solution to a major inefficiency I faced as a [medical malpractice](https://www.naic.org/cipr_topics/topic_med_mal.htm) underwriter, which was how I tried to identify accounts I wanted to underwrite. 
 
 ### So you write under things?
 
