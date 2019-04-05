@@ -8,19 +8,21 @@ published: true
 
 ## How good is Bryce Harper?
 
-My main objective in evaluating Bryce Harper's value to the Phillies was determining how good he is offensively, especially with regards to run production. I was much less concerned with his defensive ability because, as an outfielder, he is unlikely to change the score of a given game on the field. Of course, a truly terrible outfielder who misses routine fly balls and can't make a decent through to the plate will cost their team some runs, but considering Harper is not a liability in the outfield, I chose to focus on his hitting.
+When evaluating Bryce Harper's value to the Phillies, I looked closely at how good he is offensively, especially with regards to run production. I was much less concerned with his defensive ability because, as an outfielder, he is unlikely to change the score of a given game on the field. Of course, a truly terrible outfielder who misses routine fly balls and can't make a decent through to the plate will cost their team some runs, but considering Harper is not a liability in the outfield, I focused on his hitting.
 
-As I outlined in Part 1 of this project, the key offensive stats I looked at were run production, OBP, and SLG. Considering Harper has been in the league for only 7 years plus one year in the Minor League, I wanted to get a sense of his average run production before trying to make any assumptions about his future production. 
+As I outlined in Part 1 of this project, the key offensive stats I looked at were runs, OBP, and SLG. Considering Harper has been in the league for only 7 years plus one year in the Minor League, I wanted to get a sense of his average run production before trying to make any assumptions about his future production. 
+
+_As a disclaimer, I understand that building a model off of such little data is dubious. That is in part my point: signing a player for a long-term contract when doesn't have a substantial track record is very risky._
 
 ![]({{site.baseurl}}/img/bhRunsggplot.png)
 
-The first thing I noticed about this graph was his inconsistency in production. In 2014 when he was just 22, Harper only played 100 games due to a knee injury that required surgery. It seems like the surgery was not just successful but also gave him either a lot of motivation to perform in 2015 or hitting super powers, because in 2015 he came back to lead the league in runs and HRs, lead the entire MLB in OBP and SLG, make the All Star team, win the NL [MVP award](https://en.wikipedia.org/wiki/Major_League_Baseball_Most_Valuable_Player_Award), and win the NL [Silver Slugger Award](https://en.wikipedia.org/wiki/Silver_Slugger_Award).
+The first thing I noticed about this graph was his inconsistency in production. In 2014 when he was just 22, Harper only played 100 games due to a knee injury that required surgery. It seems that the surgery was not just successful but also gave him either a lot of motivation to perform in 2015 or hitting superpowers, because in 2015 he came back to lead the league in runs and HRs, lead the entire MLB in OBP and SLG, make the All Star team, win the NL [MVP award](https://en.wikipedia.org/wiki/Major_League_Baseball_Most_Valuable_Player_Award), and win the NL [Silver Slugger Award](https://en.wikipedia.org/wiki/Silver_Slugger_Award).
 
 While these two seasons are definitely critical for understanding Harper as an offensive player, they make his stats pretty challenging to predict. For example, when I took a look at the relationship between runs scored, OBP and SLG, I got this:
 
 ![]({{site.baseurl}}/img/bhHittingStatsgg.png)
 
-Statistically, the results of the Moneyball model were unusable
+Statistically, the results of the Moneyball model were unusable due to a lack of statistical significance and massive errors.
 
 ```
 Call:
@@ -41,7 +43,7 @@ Multiple R-squared:  0.481,	Adjusted R-squared:  0.2734
 F-statistic: 2.317 on 2 and 5 DF,  p-value: 0.1941
 ```
 
-This was not a welcome discovery but my determination to find out if Harper is actually overrated helped me to persevere. I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production. I will spare you the details and simply leave you with what I found to be the most successful model I could find.
+I was not surprised by these results. I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production. I will spare you the details and simply leave you with what I found to be the most successful model I could find.
 
 **Model 2: OBP + SLG + G**
 
