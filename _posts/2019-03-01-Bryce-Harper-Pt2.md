@@ -8,19 +8,19 @@ published: true
 
 ## How good is Bryce Harper?
 
-My main objective in evaluating Bryce Harper's value to the Phillies was determining how good he is offensively, especially with regards to run production. I was much less concerned with his defensive ability because, as an outfielder, he is unlikely to change the score of a given game on the field. Of course, a truly terrible outfielder who misses routine fly balls and can't make a decent throw to the plate will cost their team some runs, but considering Harper is not a liability in the outfield, I chose to focus on his hitting.
+My main objective in evaluating Bryce Harper's value to the Phillies was analyzing his offensively ability, paying special attention to his past run production. I was much less concerned with his defensive ability because, as an outfielder, he is unlikely to change the score of a given game on the field. Of course, a truly terrible outfielder who misses routine fly balls and can't make a decent throw to the plate will cost their team some runs, but considering Harper is not a liability in the outfield, I chose to focus on his hitting.
 
 As I outlined in Part 1 of this project, the key offensive stats I looked at were run production, OBP, and SLG. Considering Harper has been in the league for only 7 years plus one year in the Minor League, I wanted to get a sense of his average run production before trying to make any assumptions about his future production. 
 
 ![]({{site.baseurl}}/img/bhRunsggplot.png)
 
-The first thing I noticed about this graph was his inconsistency in production. In 2014 when he was just 22, Harper only played 100 games due to a knee injury that required surgery. It seems like the surgery was not just successful but also gave him either a lot of motivation to perform in 2015 or hitting super powers, because in 2015 he came back to lead the league in runs and HRs, lead the entire MLB in OBP and SLG, make the All Star team, win the NL [MVP award](https://en.wikipedia.org/wiki/Major_League_Baseball_Most_Valuable_Player_Award), and win the NL [Silver Slugger Award](https://en.wikipedia.org/wiki/Silver_Slugger_Award).
+The first thing I noticed about this graph was his inconsistency in production. In 2014 when he was just 22, Harper only played 100 games due to a knee injury that required surgery. It seems like the surgery was not just successful but also gave him a combination of motivation and hitting super powers, because in 2015 he came back to lead the league in runs and HRs, lead the entire MLB in OBP and SLG, make the All Star team, win the NL [MVP award](https://en.wikipedia.org/wiki/Major_League_Baseball_Most_Valuable_Player_Award), and win the NL [Silver Slugger Award](https://en.wikipedia.org/wiki/Silver_Slugger_Award).
 
-While these two seasons are definitely critical for understanding Harper as an offensive player, they make his stats pretty challenging to predict. For example, when I took a look at the relationship between runs scored, OBP and SLG, I got this:
+While these two seasons are definitely critical for understanding Harper as an offensive player, they make his stats pretty challenging to predict, on top of the dubiousness of having so little data to start with. For example, when I took a look at the relationship between runs scored, OBP and SLG, I got this:
 
 ![]({{site.baseurl}}/img/bhHittingStatsgg.png)
 
-Statistically, the results of the Moneyball model were unusable
+Statistically, the results of the Moneyball model were unusable due to their lack of statistical significance and low R-squared values. 
 
 ```
 Call:
@@ -41,11 +41,11 @@ Multiple R-squared:  0.481,	Adjusted R-squared:  0.2734
 F-statistic: 2.317 on 2 and 5 DF,  p-value: 0.1941
 ```
 
-This was not a welcome discovery but my determination to find out if Harper is actually overrated helped me to persevere. I decided to see what other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production. I will spare you the details and simply leave you with what I found to be the most successful model I could find.
+Based on the graphical visualization above, I was not surprised by these results and decided to see if there were other significant statistical relationships I could find to predict Harper's run production. From here, I tried many different combinations of the dependent variables to see if any could make a statistically valid prediction about Harper's run production. I will spare you the details and simply leave you with what I found to be the most successful model I could find. (NB: I said “most” successful. It is still not a great model owing in large part to the lack of data, but workable for my purposes nonetheless.)
 
 **Model 2: OBP + SLG + G**
 
-When I had graphed Harper's runs over time, it was obvious that the season he got knee surgery he scored the fewest runs on account of the injury and amount of time spent on the bench. Therefore, I added games played to the model:
+When I graphed Harper's runs over time, it was obvious that the season he had knee surgery he scored the fewest runs on account of the injury and amount of time spent on the bench. Therefore, I added games played to the model. I chose games because, unlike OBP and SLG, it is not a rate and therefore seemed less likely to be too closely related to the other variables.
 
 ```
 lm <- lm(R ~ OBP + SLG + G, data = BryceHarperHitting)
@@ -72,11 +72,11 @@ Multiple R-squared:  0.9699,	Adjusted R-squared:  0.9474
 F-statistic:    43 on 3 and 4 DF,  p-value: 0.001679
 ```
 
-This result showed a big improvement from my initial model, but I wanted to run some diagnostic tests to see how usable it was. 
+This result showed a big improvement from my initial model, but I wanted to do some more analysis to see how viable this model was.
 
 #### Analysis
 
-The first thing I checked for was if there was collinearity between variables
+The first thing I checked for was if there was collinearity between variables.
 
 ```
 cov(BryceHarperHitting$SLG, BryceHarperHitting$OBP)
@@ -86,7 +86,7 @@ cov(BryceHarperHitting$SLG, BryceHarperHitting$G)
 cov(BryceHarperHitting$G, BryceHarperHitting$OBP)
 > 0.30
 ```
-I was not totally happy with these results due to the slight positive relationship between the variables, but I decided to look at the residuals to get a more comprehensive understanding of my model. 
+Although games had a slight positive covariance with OBP and SLG, I felt that it was small enough (and much smaller than other variables) to continue my analysis by inspecting the model’s residuals.
 
 Using the olsrr package, I ran the following:
 
@@ -95,27 +95,14 @@ ols_plot_resid_qq(lm)
 ```
 ![]({{site.baseurl}}/img/QQ0.png)
 
-```
-ols_test_normality(lm)
-
------------------------------------------------
-       Test             Statistic       pvalue  
------------------------------------------------
-Shapiro-Wilk              0.9711         0.9066 
-Kolmogorov-Smirnov        0.123          0.9981 
-Cramer-von Mises          0.6558         0.0140 
-Anderson-Darling          0.1535         0.9278 
------------------------------------------------
-```
-
-Here we see that our Q-Q plot is pretty good and that all but Cramer-von Mises test support the null hypothesis that the residuals of the model are normally distributed.
+Here we see that our Q-Q plot is fairly linear although not perfectly aligned.
 
 ```
 ols_plot_resid_hist(lm)
 ```
 ![]({{site.baseurl}}/img/ResHistlm0.png)
 
-Additionally, this histogram shows that the mean of the residuals is clearly at 0 but the data might be skewed. I checked the summary and tested for this and found that the distribution was approximately symmetric.
+Additionally, this histogram shows that the mean of the residuals appears to be 0 but that the data might be skewed. I checked the summary and tested for this and found that the distribution was approximately symmetric with its mean at 0.
 
 ```
 summary(lm6$residuals)
@@ -126,7 +113,7 @@ skewness(lm$residuals)
 > 0.1321866
 ```
 
-Finally, I calculated the standard deviation and variance of the residuals:
+Finally, I calculated the standard deviation and variance of the residuals, which were fairly high, but relatively lower than other models I tested:
 ```
 var(lm$residuals)
 > 18.44
@@ -138,7 +125,7 @@ sd(lm$residuals)
 
 #### Prediction
 
-Let's see how many runs this model predicts and how that compares to other predictive resources out there. The equation we have is:
+At this point, I felt that I could responsibly run the model to see what predictions it would make. Assembling the necessary equation from the regression above, we have:
 
 ```
 Runs = -52.30 + (-378.78)*OBP + 343.86*SLG + 0.83*G
@@ -188,7 +175,7 @@ When it became clear that Bryce Harper was going to sign a long term contract th
 
 ![]({{site.baseurl}}/img/APruns.png)
 
-I know that Harper is not Pujols. If any comparison is to be made however, Pujols has had a more impressive career considering the number of times he has been an MVP, and All Star, and won both the Silver Slugger and [Golden Glove](https://en.wikipedia.org/wiki/Rawlings_Gold_Glove_Award) Awards. To be fair, Pujols came into the Majors towards the end of the [Steroids Era](http://www.espn.com/mlb/topics/_/page/the-steroids-era). He was never suspended for steroid use, but the way the game was played in the end of the 90s and early 2000s is different than it is played now since the emphasis on power hitting fueled by performance enhancers has dissipated..
+I know that Harper is not Pujols. If any comparison is to be made however, Pujols has had a more impressive career considering the number of times he has been an MVP, and All Star, and won both the Silver Slugger and [Golden Glove](https://en.wikipedia.org/wiki/Rawlings_Gold_Glove_Award) Awards. To be fair, Pujols came into the Majors towards the end of the [Steroids Era](http://www.espn.com/mlb/topics/_/page/the-steroids-era). He was never suspended for steroid use, but the way the game was played in the end of the 90s and early 2000s is different than it is played now since the emphasis on power hitting fueled by performance enhancers has dissipated.
 
 By 2010, the Steroids Era a nearly a decade is the past which makes nosedive that Pujols' run production took particularly concerning for the long-term prospects of even the best players. Whether the deterioration in run production is a function of age or the decreased motivation that comes with incredible job security, sustaining numbers that warrant a $22M to $30M salary for 13 years is not feasible.
 
