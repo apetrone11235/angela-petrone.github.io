@@ -14,3 +14,7 @@ Here is a simple illustration of how the number of visits per 1000 people change
 ![]({{site.baseurl}}/img/VisitsOverTime.png)
 
 As you can see, my initial assumption about emergency room visits decreasing was incorrect. Seeing this graph left me with a lot of questions, primarily, why are visits on the rise and why did the implementation of the ACA not have any noticeable effect of the overall trend? And why did I along with so many of my colleagues and clients not question this assumption earlier? 
+
+From here, I decided to take a closer look at available literature on the subject as well as the impact on a more local basis by investigating how the rate in Pennsylvania (where I am originally from) changed compared to Massachusetts (where I live how and had insurance exchanges before the ACA was implemented).
+
+Stay tuned for the part 2
