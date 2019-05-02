@@ -1,7 +1,7 @@
 ---
 layout: post
 title: About Me
-published: false
+published: true
 ---
 On a chilly spring day in 2017, I got a call from my roommate. I was in my office and immediately knew that something was wrong because, as two twentysomething girls, we never talked on the phone. When I picked up, her voice was strained and nearly overwhelmed by background noise. She had been rock climbing at a local gym with some friends when she had fallen and landed awkwardly on her arm. Despite her best attempts to convince the group to let her get an Uber to the hospital, someone had called an ambulance and she was in transit to the nearest emergency room.
 
