@@ -9,6 +9,6 @@ As I got on the subway to meet her at the hospital, I realized that I had only b
 
 While it is not feasible to visit every type of outpatient or even urgent care facility (especially not in Boston where healthcare facilities are nearly as common as Dunks), I wanted to use data to learn more about how people use emergency care. To start, I pulled state and countrywide data from the [Kaiser Family Foundation](https://www.kff.org/other/state-indicator/emergency-room-visits-by-ownership/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D), cleaned it up and after some exploration, made visualizations showing what I found. ![Here]({{site.baseurl}}/img/raw_data_kff/csv) is the dataset I started with and ![here]({{site.baseurl}}/img/raw_data/csv) is what it looked like after some simple modifications in Excel. From there, I finished modifying it to my preference in R.
 
-![]({{site.baseurl}}/img/VisitsOverTime.jpg)
+![]({{site.baseurl}}/img/VisitsOverTime.png)
 
 As you can see, my initial assumption about emergency room visits decreasing was incorrect. Seeing these graphs left me with a lot of questions, primarily, why are visits on the rise and why did the implementation of the ACA not have any noticeable effect of the overall trend? I have also been confused by mixed information online whether or not emergency room visits are rising or falling.
