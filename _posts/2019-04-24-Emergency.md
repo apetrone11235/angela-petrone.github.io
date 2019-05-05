@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Emergency! Emergency!
-subtitle: Does healthcare policy encourage people to seek medical help and is that always a good thing?
+subtitle: How understanding market trends can make underwriting a more proactive process
 published: true
 ---
 On a chilly spring day in 2017, I got a call from my roommate. I was in my office and immediately knew that something was wrong because, as two twentysomething girls, we never talked on the phone. When I picked up, her voice was strained and nearly overwhelmed by background noise. She had been rock climbing at a local gym with some friends when she had fallen and landed awkwardly on her arm. Despite her best attempts to convince the group to let her get an Uber to the hospital, someone had called an ambulance and she was in transit to the nearest emergency room.
@@ -16,8 +16,4 @@ To start, here is a simple illustration of how the number of visits per 1000 peo
 
 ![]({{site.baseurl}}/img/VisitsOverTime.png)
 
-As you can see, my initial assumption about emergency room visits decreasing was incorrect. Seeing this graph left me with a lot of questions, primarily, why are visits on the rise and why did the implementation of the ACA not have any noticeable effect of the overall trend? And why did I along with so many of my colleagues and clients not question this assumption earlier? 
-
-From here, I decided to take a closer look at available literature on the subject as well as the impact on a more local basis by investigating how the rate in Pennsylvania (where I am originally from) changed compared to Massachusetts (where I live now and had insurance exchanges before the ACA was implemented).
-
-Stay tuned for the part 2
+As you can see, my initial assumption about emergency room visits decreasing was incorrect. Seeing this graph left me with a lot of questions, primarily, with the rate of ER visits on the rise, what is really going on in the outpatient healthcare market? 
