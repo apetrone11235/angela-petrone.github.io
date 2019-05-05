@@ -12,7 +12,7 @@ For a bit of added context, in my role as a healthcare underwriter, I was respon
 
 I wanted to use data to learn more about how people use emergency care so I pulled state and countrywide data from the [Kaiser Family Foundation](https://www.kff.org/other/state-indicator/emergency-room-visits-by-ownership/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D), cleaned it up, and after some exploration made visualizations showing what I found.
 
-Here is a simple illustration of how the number of visits per 1000 people changed over time across the whole country:
+To start, here is a simple illustration of how the number of visits per 1000 people changed over time across the whole country:
 
 ![]({{site.baseurl}}/img/VisitsOverTime.png)
 
