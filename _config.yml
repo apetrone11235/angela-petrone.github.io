@@ -71,7 +71,7 @@ social-network-links:
   rss: true
   email: "apetrone11235@gmail.com"
 #  facebook: daattali
-#  github: daattali
+  github: apetrone11235
 #  twitter: daattali
 #  reddit: yourname
 #  google-plus: +DeanAttali
@@ -93,6 +93,7 @@ share-links-active:
   facebook: false
   google: false
   linkedin: true
+  github: true
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
