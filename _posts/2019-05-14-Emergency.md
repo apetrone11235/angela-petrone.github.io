@@ -18,7 +18,7 @@ To start, here is a simple illustration of how the number of visits per 1000 peo
 
 As you can see, my initial assumption about emergency room visits decreasing was incorrect. Seeing this graph left me with a lot of questions, primarily, with the rate of ER visits on the rise, what is really going on in the outpatient healthcare market? 
 
-## Medicaid or the Lack Thereof ##
+## The Impact of Medicaid Expansion Option ##
 
 Thinking about this inital observation brought me back to my internships at [Independence Blue Cross](https://www.ibx.com/). If you looked at my [resume](https://angela-petrone.com/img/Resume2019.pdf), you'll know that I worked there for three summers, the first of which coincided with the [2012 Supreme Court ruling](https://en.wikipedia.org/wiki/National_Federation_of_Independent_Business_v._Sebelius) that decided that the constitutionality of the individual mandate portion of the ACA but determined states that opted not to expand Medicaid coverage could not lose all of their federal Medicaid funding. Since I was living in notoriously purple Pennsylvania at the time and we had a Republican governor, there was a lot of uncertainty, especially in the personal health insurance world, about how these changes would play out. 
 
