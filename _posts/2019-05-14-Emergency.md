@@ -14,7 +14,7 @@ I wanted to use data to learn more about how people use emergency care so I pull
 
 To start, here is a simple illustration of how the number of visits per 1000 people changed over time across the whole country:
 
-![]({{site.baseurl}}/img/VisitsOverTime.png)
+![]({{site.baseurl}}/img/YEARxTYPE.jpg)
 
 As you can see, my initial assumption about emergency room visits decreasing was incorrect. Seeing this graph left me with a lot of questions, primarily, with the rate of ER visits on the rise, what is really going on in the outpatient healthcare market? 
 
