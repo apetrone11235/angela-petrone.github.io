@@ -17,11 +17,13 @@ description: Personal Website
 
 # List of links in the navigation bar
 navbar-links:
-  Resume: "apetrone11235.github.io/img/Resume2022.pdf"
+  CV: 
+    - Resume: "apetrone11235.github.io/img/Resume2022.pdf"
+    - Undergraduate Thesis: https://github.com/apetrone11235/apetrone11235.github.io/blob/master/Compiled%20Thesis%20Work.pdf
   Board Memberships:
     - Insurance Industry Charitable Foundation: "https://iicf.org/"
-  Current & Former Employers:
-    - Verisk Analytics: "https://www.air-worldwide.com/"
+  Work History:
+    - Verisk Analytics (current): "https://www.air-worldwide.com/"
     - CNA Surety: "https://www.cnasurety.com/cna/guest/cnasurety/"
     - CNA Insurance: "https://www.cna.com/web/guest/cna/home/"
     - Independence Blue Cross: "http://www.ibx.com/"
