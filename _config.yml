@@ -40,10 +40,10 @@ title-img: "/img/webPic.jpg"
 
 # Personalize the colors in your website. Colour values can be any valid CSS colour
 
-navbar-col: "#E8C3A9"
+navbar-col: "#ebe4df"
 navbar-text-col: "#404040"
 navbar-children-col: "#F5F5F5"
-page-col: "#F8EDe5"
+page-col: "#e7ddd5"
 link-col: "#008AFF"
 hover-col: "#0085A1"
 footer-col: "#F5F5F5"
