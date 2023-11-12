@@ -1,6 +1,9 @@
 ---
 layout: post
-title: Do you want to hear a joke?
+title: APIs are no laughing matter
 published: false
 ---
 
+```
+import requests
+```
