@@ -17,8 +17,6 @@ description: Personal Data Projects
 
 # List of links in the navigation bar
 navbar-links:
-  Resume: 
-    - Resume: "apetrone11235.github.io/img/Resume2023_Petrone.pdf"
     - Undergraduate Thesis: https://github.com/apetrone11235/apetrone11235.github.io/blob/master/Compiled%20Thesis%20Work.pdf
   Board Memberships:
     - IICF (Former Chair, Boston): "https://iicf.org/"
